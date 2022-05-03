@@ -3,10 +3,10 @@ module.exports = {
   base:"/vuepress/",
   description: 'Just playing around',
   head: [
-    ['link', { rel: 'icon', href: ('/vuepress/home.jpeg') }]
+    ['link', { rel: 'icon', href: ('./assets/home.jpeg') }]
   ],
   themeConfig: {
-    logo: '/vuepress/img/home.jpeg',
+    logo: './assets/img/home.jpeg',
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
