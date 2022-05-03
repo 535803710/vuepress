@@ -1,5 +1,6 @@
 module.exports = {
   title: '前端小蜗',
+  base:"/vuepress/",
   description: 'Just playing around',
   head: [
     ['link', { rel: 'icon', href: '/img/home.jpeg' }]
