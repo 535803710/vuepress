@@ -6,7 +6,7 @@ module.exports = {
     ['link', { rel: 'icon', href: ('/assets/img/home.jpeg') }]
   ],
   themeConfig: {
-    logo: '/img/home.jpeg',
+    logo: '/assets/img/home.jpeg',
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
