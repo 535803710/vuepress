@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/home.jpeg
+heroImage: "$withBase('/img/home.jpeg')"
 heroText: 前端小蜗
 tagline: 前端小蜗的总结归纳
 actionText: Get Start →

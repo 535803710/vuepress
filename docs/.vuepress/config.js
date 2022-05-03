@@ -3,14 +3,14 @@ module.exports = {
   base:"/vuepress/",
   description: 'Just playing around',
   head: [
-    ['link', { rel: 'icon', href: $withBase('/img/home.jpeg') }]
+    ['link', { rel: 'icon', href: ('/assets/img/home.jpeg') }]
   ],
   themeConfig: {
     logo: '/img/home.jpeg',
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
-      { text: '前端学习路径', link:$withBase('https://f2e.tech/')  },
+      { text: '前端学习路径', link: 'https://f2e.tech/' },
     ],
     sidebar: [
       '/guide/',
