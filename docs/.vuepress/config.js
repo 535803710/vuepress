@@ -20,7 +20,8 @@ module.exports = {
         // collapsable:false,
         children:[
           '/JS&ES/词法环境和闭包/',
-          ['/JS&ES/事件委托/',"事件委托"]
+          ['/JS&ES/事件委托/',"事件委托"],
+          '/JS&ES/尾递归/'
         ]
       },
       {
