@@ -24,7 +24,7 @@
   - [内部网关路由协议之 OSPF 协议](#内部网关路由协议之-ospf-协议)
   - [外部网关路由协议之 BGP 协议](#外部网关路由协议之-bgp-协议)
 - [传输层](#传输层)
-- [UDP 协议详解](#udp-协议详解)
+  - [UDP 协议详解](#udp-协议详解)
   - [TCP 协议详解](#tcp-协议详解)
     - [TCP 报文段结构：](#tcp-报文段结构)
   - [可靠传输的基本原理](#可靠传输的基本原理)
@@ -275,7 +275,7 @@ BGP（Border Gateway Protocol）边际网关协议【应用层】：是运行在
 
 ![](https://img-blog.csdnimg.cn/img_convert/3e813c4865d3c90d5c960e3febc02152.png)
 
-## UDP 协议详解
+### UDP 协议详解
 
 UDP(User Datagram Protocol: 用户数据报协议)，是一个非常简单的协议，
 ![](https://img-blog.csdnimg.cn/img_convert/c1e2c463a94254f0e157e1ecb84051fb.png)
