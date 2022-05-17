@@ -10,7 +10,7 @@ module.exports = {
       { text: "指南", link: "/guide/" },
       { text: "前端学习路径", link: "https://f2e.tech/" },
     ],
-    sidebarDepth :3,
+    sidebarDepth: 3,
     sidebar: [
       "/guide/",
       {
@@ -29,17 +29,20 @@ module.exports = {
         title: "小程序", // 必要的
         path: "/微信/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         // collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 2,    // 可选的, 默认值是 1
+        // sidebarDepth: 2,    // 可选的, 默认值是 1
         children: [
           ["/微信/小程序监听页面滚动/", "小程序监听页面滚动"],
           ["/微信/小程序原理/", "小程序底层原理"],
         ],
       },
       {
-        title: "计算机网络",
-        path: "/HTTP/计算机网络/",
-        sidebarDepth: 3,    // 可选的, 默认值是 1
-        children: [["/HTTP/计算机网络/", "计算机网络知识点"]],
+        title: "HTTP",
+        path: "/HTTP/",
+        // sidebarDepth: 3,    // 可选的, 默认值是 1
+        children: [
+          "/HTTP/http缓存/",
+          ["/HTTP/计算机网络/", "计算机网络知识点"],
+        ],
       },
       {
         title: "Vue",
@@ -61,7 +64,7 @@ module.exports = {
           ["/面试/webpack知识点/", "webpack知识点"],
           "/面试/垃圾回收机制/",
           "/面试/设计模式/",
-          "/面试/防抖节流/"
+          "/面试/防抖节流/",
         ],
       },
     ],
