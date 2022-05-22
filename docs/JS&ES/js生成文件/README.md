@@ -2,7 +2,7 @@
 
 ## 知识点
 
-- [Bolb()](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob/Blob)
+- [Blob()](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob/Blob)
   - 接收两个参数（array,options），返回一个 Blob 对象
   - `var aBlob:Blob = new Blob( array:[ArrayBuffer|ArrayBufferView|Blob|DOMString], options:{type:string,endings:string} );`
 - [window.URL.createObjectURL()](https://developer.mozilla.org/zh-CN/docs/Web/API/URL/createObjectURL)
