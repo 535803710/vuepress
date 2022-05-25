@@ -25,7 +25,8 @@ module.exports = {
           ["/JS&ES/js生成文件/", "JS生成并下载文件"],
           "/JS&ES/原型和原型链/",
           "/JS&ES/浏览器渲染/",
-          "/JS&ES/Proxy/"
+          "/JS&ES/Proxy/",
+          '/JS&ES/深入模块import 和require/'
         ],
       },
       {
