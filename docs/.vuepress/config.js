@@ -54,6 +54,7 @@ module.exports = {
         children: [
           ["/Vue/快速diff算法/", "快速diff算法"],
           ["/Vue/双端diff算法/", "双端diff算法"],
+          "/Vue/vue-router原理/"
         ],
       },
       {
