@@ -46,6 +46,7 @@ module.exports = {
         children: [
           "/HTTP/http缓存/",
           ["/HTTP/计算机网络/", "计算机网络知识点"],
+          "/HTTP/长轮询/"
         ],
       },
       {
