@@ -26,7 +26,8 @@ module.exports = {
           "/JS&ES/原型和原型链/",
           "/JS&ES/浏览器渲染/",
           "/JS&ES/Proxy/",
-          '/JS&ES/深入模块import 和require/'
+          '/JS&ES/深入模块import 和require/',
+          "/JS&ES/Mixin模式/"
         ],
       },
       {
