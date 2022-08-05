@@ -35,9 +35,9 @@ TypeScript 中的装饰器可以分为
 
 - 类装饰器
 - 方法装饰器
-- 访问符装饰器
 - 属性装饰器
-- 参数装饰器五种
+- 访问符装饰器
+- 参数装饰器
 
 最常见的主要是类装饰器、方法装饰器以及属性装饰器。
 
@@ -182,3 +182,68 @@ console.log(new Foo().name);
 成功修改 `nickName` 并且添加了新的属性 `name`
 
 
+## 访问符装饰器
+访问符装饰器并不常见，可能访问符对于有些人来说也很陌生，但它其实就是 `get value(){}` 与 `set value(v)=>{}` 这两个方法。
+
+其中 `getter` 在你访问这个属性 `value` 时触发，而 `setter` 在你对 `value` 进行赋值时触发。访问符装饰器本质上仍然是方法装饰器，它们使用的类型定义也相同。
+
+```ts
+class Foo {
+  get value() {
+    return 'xiaowo';
+  }
+
+  @HijackSetter('XIAOWO') // 劫持setter
+  set value(input: string) {
+    this.value = input;
+  }
+}
+
+function HijackSetter(val: string): MethodDecorator {
+  return (target, methodIdentifier, descriptor: any) => {
+    descriptor.set = function (newValue: string) {
+      console.log(`HijackSetter: ${newValue}`);
+    };
+    descriptor.get = function () {
+      return val;
+    };
+  };
+}
+
+const foo = new Foo();
+foo.value = 'XIAO_WO'; // HijackSetter: XIAO_WO
+console.log(foo.value); // XIAOWO
+
+```
+
+通过装饰器劫持了 `setter` 和 `getter` 改变了 `get` 的返回值，注意，装饰器不能篡改 `setter` 这里只有一个 `log` ，原本的 `setter` 逻辑还是会执行，我们无法在 `setter` 中调用原本的 `setter` ，不然会造成死循环。
+
+## 参数装饰器
+
+包含两种，构造函数的参数装饰器 和 方法的参数装饰器
+
+执行函数入参有：**类的原型**、**参数名**与**参数在函数参数中的索引值**（即第几个参数）
+
+```ts
+class Foo {
+  handler(@CheckParam() input: string) {
+    console.log(input);
+  }
+}
+
+function CheckParam(): ParameterDecorator {
+  return (target, paramIdentifier, index) => {
+    console.log(target, paramIdentifier, index);
+  };
+}
+
+// {} handler 0
+new Foo().handler('xiaowo');
+```
+
+
+## 总结
+
+以上五种就是TS中的装饰器类型，在实际项目中我们用的最的就是类装饰器，方法装饰器和属性装饰器。
+
+而不同装饰器的执行实际和顺序也是不同的。后面我们也可以讨论一下。
