@@ -39,6 +39,14 @@ module.exports = {
           ["/微信/小程序监听页面滚动/", "小程序监听页面滚动"],
           ["/微信/小程序原理/", "小程序底层原理"],
         ],
+      },{
+        title: "浏览器", // 必要的
+        path: "/浏览器/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        // collapsable: false, // 可选的, 默认值是 true,
+        // sidebarDepth: 2,    // 可选的, 默认值是 1
+        children: [
+          "/浏览器/阻止默认事件/",
+        ],
       },
       {
         title: "HTTP",
@@ -77,6 +85,13 @@ module.exports = {
           "/面试/拖放/"
         ],
       },
+      {
+        title:"TypeScript指南",
+        path:"/TS指南/",
+        children:[
+          "/TS指南/类型/",
+        ]
+      }
     ],
   },
   markdown: {
