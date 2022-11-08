@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    class Interceptor {
+      constructor() {
+        this.aspects = [];
+      }
+      // 注册拦截切面
+      use(functor) {
+        this.aspects.push(functor);
+        return this;
+      }
+
+      // 执行注册的拦截切面
+      async run(context) {
+        const aspects = this.aspects;
+        console.log("aspects", aspects);
+        const proc = aspects.reduceRight(
+          (next, currentFunc) => {
+            // console.log("a", a);
+            debugger
+            // console.log("currentFunc", currentFunc);
+            return async () => {
+              await currentFunc(context, next);
+            };
+          },
+          () => Promise.resolve()
+        );
+        // debugger
+        try {
+          await proc();
+        } catch (error) {
+          console.log(error);
+        }
+
+        return context;
+      }
+    }
+    function wait(ms) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+      });
+    }
+
+    const inter = new Interceptor();
+
+    const task = function (id) {
+      return async (ctx, next) => {
+        console.log(`task ${id} start`);
+        ctx.count++;
+        await wait(1500);
+        console.log(`count: ${ctx.count}`);
+        await next();
+        console.log(`task ${id} end`);
+      };
+    };
+
+    // 将多个任务以拦截切面的方式注册到拦截器中
+    inter.use(task(0));
+    inter.use(task(1));
+    inter.use(task(2));
+    inter.use(task(3));
+    inter.use(task(4));
+
+    // 从外到里依次执行拦截切面
+    inter.run({ count: 0 });
+  </script>
+</html>
