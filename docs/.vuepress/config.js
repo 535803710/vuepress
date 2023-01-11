@@ -77,6 +77,10 @@ module.exports = {
       {
         title: "算法",
         path: "/算法/",
+        children: [
+          "/算法/算法复杂度/",
+         
+        ],
       },
       {
         title: "面试",
