@@ -101,7 +101,12 @@ module.exports = {
         title: "TypeScrpit",
         path: "/TS指南/",
         children: [
+          "/TS指南/类型/",
+          "/TS指南/类型工具/",
+          "/TS指南/协变与逆变/",
           "/TS指南/装饰器/",
+          "/TS指南/反射元数据/",
+          
         ],
       },
       {
