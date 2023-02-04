@@ -26,8 +26,8 @@ module.exports = {
           "/JS&ES/原型和原型链/",
           "/JS&ES/浏览器渲染/",
           "/JS&ES/Proxy/",
-          '/JS&ES/深入模块import 和require/',
-          "/JS&ES/Mixin模式/"
+          "/JS&ES/深入模块import 和require/",
+          "/JS&ES/Mixin模式/",
         ],
       },
       {
@@ -39,14 +39,13 @@ module.exports = {
           ["/微信/小程序监听页面滚动/", "小程序监听页面滚动"],
           ["/微信/小程序原理/", "小程序底层原理"],
         ],
-      },{
+      },
+      {
         title: "浏览器", // 必要的
         path: "/浏览器/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         // collapsable: false, // 可选的, 默认值是 true,
         // sidebarDepth: 2,    // 可选的, 默认值是 1
-        children: [
-          "/浏览器/阻止默认事件/",
-        ],
+        children: ["/浏览器/阻止默认事件/"],
       },
       {
         title: "HTTP",
@@ -55,15 +54,13 @@ module.exports = {
         children: [
           "/HTTP/http缓存/",
           ["/HTTP/计算机网络/", "计算机网络知识点"],
-          "/HTTP/长轮询/"
+          "/HTTP/长轮询/",
         ],
       },
       {
         title: "Node",
         path: "/Node/",
-        children: [
-          "/Node/拦截器/", 
-        ],
+        children: ["/Node/拦截器/"],
       },
       {
         title: "Vue",
@@ -71,16 +68,14 @@ module.exports = {
         children: [
           ["/Vue/快速diff算法/", "快速diff算法"],
           ["/Vue/双端diff算法/", "双端diff算法"],
-          "/Vue/vue-router原理/"
+          ["/Vue/vue2.7注意事项/", "Vue2.7失去响应"],
+          "/Vue/vue-router原理/",
         ],
       },
       {
         title: "算法",
         path: "/算法/",
-        children: [
-          "/算法/算法复杂度/",
-         
-        ],
+        children: ["/算法/算法复杂度/"],
       },
       {
         title: "面试",
@@ -94,7 +89,7 @@ module.exports = {
           "/面试/前端安全/",
           "/面试/断点续传/",
           "/面试/拖放/",
-          "/面试/状态机/"
+          "/面试/状态机/",
         ],
       },
       {
@@ -106,16 +101,13 @@ module.exports = {
           "/TS指南/协变与逆变/",
           "/TS指南/装饰器/",
           "/TS指南/反射元数据/",
-          
         ],
       },
       {
-        title:"TypeScript指南",
-        path:"/TS指南/",
-        children:[
-          "/TS指南/类型/",
-        ]
-      }
+        title: "TypeScript指南",
+        path: "/TS指南/",
+        children: ["/TS指南/类型/"],
+      },
     ],
   },
   markdown: {
