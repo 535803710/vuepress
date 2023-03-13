@@ -104,10 +104,11 @@ module.exports = {
         ],
       },
       {
-        title: "TypeScript指南",
-        path: "/TS指南/",
-        children: ["/TS指南/类型/"],
+        title: "心得体会",
+        path: "/心得/",
+        children: ["/心得/避免过度设计/"],
       },
+
     ],
   },
   markdown: {
