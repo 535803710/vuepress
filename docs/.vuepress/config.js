@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         title: "HTTP",
-        path: "/HTTP/",
+        path: "/HTTP/HTTP和HTTPS",
         // sidebarDepth: 3,    // 可选的, 默认值是 1
         children: [
           "/HTTP/http缓存/",
