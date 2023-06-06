@@ -43,9 +43,10 @@ module.exports = {
       {
         title: "浏览器", // 必要的
         path: "/浏览器/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        // collapsable: false, // 可选的, 默认值是 true,
-        // sidebarDepth: 2,    // 可选的, 默认值是 1
-        children: ["/浏览器/阻止默认事件/"],
+        children: [
+          ["/浏览器/阻止默认事件/", "阻止浏览器默认事件"],
+          "/浏览器/CSS的color()/",
+        ],
       },
       {
         title: "HTTP",
@@ -108,7 +109,6 @@ module.exports = {
         path: "/心得/",
         children: ["/心得/避免过度设计/"],
       },
-
     ],
   },
   markdown: {

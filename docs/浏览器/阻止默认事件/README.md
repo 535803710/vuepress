@@ -28,14 +28,14 @@
 ⚠️ 从处理程序返回 `false` 是一个例外
 
 > 事件处理程序返回的值通常会被忽略。
-> 唯一的例外是从使用 on<event> 分配的处理程序中返回的 return false。
+> 唯一的例外是从使用 `on<event>` 分配的处理程序中返回的 return false。
 > 在所有其他情况下，return 值都会被忽略。并且，返回 true 没有意义。
 
 某些事件会相互转化。如果我们阻止了第一个事件，那就没有第二个事件了。
 
-例如，在 <input> 字段上的 `mousedown` 会导致在其中获得焦点，以及 `focus` 事件。如果我们阻止 `mousedown` 事件，在这就没有焦点了。
+例如，在 `<input>` 字段上的 `mousedown` 会导致在其中获得焦点，以及 `focus` 事件。如果我们阻止 `mousedown` 事件，在这就没有焦点了。
 
-尝试点击下面的第一个 <input> —— 会发生 `focus` 事件。但是如果你点击第二个，则没有聚焦
+尝试点击下面的第一个 `<input>` —— 会发生 `focus` 事件。但是如果你点击第二个，则没有聚焦
 
 ```html
 <input value="Focus works" onfocus="this.value=''" />
@@ -75,9 +75,9 @@
 
 上面这段代码还是会跳到百度，为什么呢？
 
-当浏览器读取诸如 onclick 之类的 on\* 特性（attribute）时，浏览器会根据其内容创建对应的处理程序。
+当浏览器读取诸如 onclick 之类的 `on\*` 特性（attribute）时，浏览器会根据其内容创建对应的处理程序。
 
-对于 onclick="handler()" 来说，函数是：
+对于` onclick="handler()"` 来说，函数是：
 
 ```js
 function(event) {
@@ -107,14 +107,14 @@ function(event) {
 有很多默认的浏览器行为：
 
 - `mousedown` —— 开始选择（移动鼠标进行选择）。
-- 在` <input type="checkbox">` 上的 click —— 选中/取消选中的 input。
+- 在` <input type="checkbox">` 上的 `click` —— 选中/取消选中的 `input。`
 - `submit` —— 点击 `<input type="submit">` 或者在表单字段中按下 `Enter` 键会触发该事件，之后浏览器将提交表单。
 - `keydown` —— 按下一个按键会导致将字符添加到字段，或者触发其他行为。
 - `contextmenu` —— 事件发生在鼠标右键单击时，触发的行为是显示浏览器上下文菜单。
   ……还有更多……
   如果我们只想通过 `JavaScript` 来处理事件，那么所有默认行为都是可以被阻止的。
 
-想要阻止默认行为 —— 可以使用 `event.preventDefault()` 或 `return false`。**第二个方法只适用于通过 on<event> 分配的处理程序。**
+想要阻止默认行为 —— 可以使用 `event.preventDefault()` 或 `return false`。**第二个方法只适用于通过` on<event> `分配的处理程序。**
 
 `addEventListener` 的 `passive: true` 选项告诉浏览器该行为不会被阻止。这对于某些移动端的事件（像 `touchstart` 和 `touchmove`）很有用，用以告诉浏览器在滚动之前不应等待所有处理程序完成。
 
