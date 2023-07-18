@@ -1,3 +1,5 @@
+
+
 # 词法环境和闭包
 ## 词法环境
 
@@ -15,7 +17,7 @@
 
 举例
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ecc92d59da449bca013bf291ea7df00~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](./2ecc92d59da449bca013bf291ea7df00~tplv-k3u1fbpfcp-watermark.image.png)
 
 上面的例子只有一个词法环境，
 **框内表示环境记录对象**，**箭头表示外部引用**（由于没有外部引用，全局词法环境没有外部引用所以是null）
