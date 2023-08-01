@@ -7,7 +7,8 @@
 
 # 实现效果
 
-![intersection.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/55ef7f16a79d433fa2b10425a6c4bc51~tplv-k3u1fbpfcp-watermark.image?)
+![intersection.gif](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/95d9c70d3fd4a0ec00c44b1fb028c2d8.gif)
+<!-- ![intersection.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/55ef7f16a79d433fa2b10425a6c4bc51~tplv-k3u1fbpfcp-watermark.image?) -->
 
 
 在浏览器的情况下，我们可以使用 `Intersection Observer`
@@ -26,11 +27,13 @@
 
 
 # IntersectionObserver
+
 [小程序中`IntersectionObserver`的文档地址](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/IntersectionObserver.html)
 
 IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60eff9d7e69b4859885c63ffca805a27~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/4cd325e6b87d4d29a3869bc13baa266f.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60eff9d7e69b4859885c63ffca805a27~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ## relativeToViewport
 指定页面显示区域作为参照区域之一

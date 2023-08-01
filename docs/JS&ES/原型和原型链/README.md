@@ -1,6 +1,7 @@
 # 原型和原型链
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/2/24/1691fc878b9beefa~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/43fc65212855baaf0f2fb8fdecc1947a.webp)
+<!-- ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/2/24/1691fc878b9beefa~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 ## 原型
 

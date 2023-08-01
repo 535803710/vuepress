@@ -39,11 +39,14 @@ MVVM 最初是由微软提出的，用于开发 WPF 和 Silverlight 应用程序
 ## 在Vue.js中不要过度层次设计
 
 Vue.js 采取的是MVVM的设计架构
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b68dc0e54584eaabd69ed4adf3a9024~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/315b2c6aa06aad6fea9a10801e93a501.png)
+<!-- ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b68dc0e54584eaabd69ed4adf3a9024~tplv-k3u1fbpfcp-watermark.image?) -->
 
 
 而在开发中我们可能会遇到这种情况
-![Untitled-2023-03-13-1722.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9ac76b3d33a94859ab0df9d57a16667e~tplv-k3u1fbpfcp-watermark.image?)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/35735b54d5ab54784a08f89575ea0ae0.png)
+<!-- ![Untitled-2023-03-13-1722.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9ac76b3d33a94859ab0df9d57a16667e~tplv-k3u1fbpfcp-watermark.image?) -->
 
 
 这种情况在原有的MVVM层级上增加了Pinia来存储数据，又通过StoreToRefs() 来完成响应式的转换。

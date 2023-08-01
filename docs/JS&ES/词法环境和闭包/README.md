@@ -26,8 +26,8 @@
 
 **下面继续**
 
-
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/87119650b39547b18d43e8b23773b0c4~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/8476482e19351e24c915ec748b4b0155.png)
+<!-- ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/87119650b39547b18d43e8b23773b0c4~tplv-k3u1fbpfcp-watermark.image?) -->
 
 先申明一个变量 
 右边的词法环境变化
@@ -58,7 +58,8 @@
 例如，这是添加一个函数时全局词法环境的初始状态：
 
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b132bc19231e492e9babeda7dfd99048~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/f0bfe558a59722ab9cf64597a7dad5dc.png)
+<!-- ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b132bc19231e492e9babeda7dfd99048~tplv-k3u1fbpfcp-watermark.image?) -->
 这种只适用于函数声明，不适用于将函数赋值给变量例如 `let say = function(name)...`
 
 ### 3.内部和外部的词法环境
@@ -66,7 +67,8 @@
 
 例如，对于 `say("John")`，它看起来像这样（当前执行位置在箭头标记的那一行上）：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b866c845217a4721898a06c01237a496~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/f23b2f954489248a25070536ae6428ad.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b866c845217a4721898a06c01237a496~tplv-k3u1fbpfcp-watermark.image?) -->
 
 在函数运行的时候，我们得到两个词法环境： 一个是函数内部的词法环境，一个是全局词法环境
 
@@ -83,7 +85,9 @@
  上面例子搜索过程如下
  - `name`在内部词法环境查找，在`alert`试图访问`name`时可以找到
  - 在试图访问`phrase`时发现当前词法环境没有，顺着外部词法环境找到
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2052116650d04be1950074aaa35c1406~tplv-k3u1fbpfcp-watermark.image?)
+
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/07e2546c07513af05d847973e0e7b572.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2052116650d04be1950074aaa35c1406~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ### 4.返回函数
 看到这个例子
@@ -101,25 +105,29 @@ let counter = makeCounter();
 
 在调用`makeCounter()`开始，都会创建一个新的词法环境，存储`makeCounter`运行是的变量
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c023ec7437ed4e958f0df7030c3248d4~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/bf6dc4b3a37ce97c598426e053190dcd.png)
+<!-- ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c023ec7437ed4e958f0df7030c3248d4~tplv-k3u1fbpfcp-watermark.image?) -->
 
 不同的是在执行`makeCounter()`时只是创建了一个嵌套函数：`return count++`，这时没有运行，只是创建
 
 所有函数在“出生”时都会记住创建他们的词法环境，不是什么魔法，每个函数都有`[[Enviroment]]`隐藏属性，保存了对创建该函数的词法环境的引用。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/57516a88b870430eb075f17edf64f077~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/6659a933112145e55d9a117ed902051e.png)
+<!-- ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/57516a88b870430eb075f17edf64f077~tplv-k3u1fbpfcp-watermark.image?) -->
 所以 `cunter.[[Enviroment]]`有对`count:0`词法环境的引用。这就是函数记住他创建于何处的方式，与函数在哪调用无关。`[[Environment]]`引用在函数创建的时候就被永久保存了
 
 
 等会在调用`counter()`时，会创构建一个新的词法环境，并且其外部词法环境引用于`counter().[[Environment]]`
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53e7ec3490de4f1f83bfa50253be3c4f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/ac941f94bb914e9ad85398c0568336ee.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53e7ec3490de4f1f83bfa50253be3c4f~tplv-k3u1fbpfcp-watermark.image?) -->
 
 现在，调用`counter()`时查找count变量，首先查找自己的词法环境，没有找到（因为没有局部变量），向上找外部的词法环境（`makeCounter()`的词法环境），找到然后修改。
 
 **在变量所在的词法环境中更新变量。**
 
 下面是执行后的状态
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c55e049a8d4849a7841e4e4c8a4e4405~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/c07dd2f77d0abfdd336a6cdfa3288e77.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c55e049a8d4849a7841e4e4c8a4e4405~tplv-k3u1fbpfcp-watermark.image?) -->
 
 如果我们调用 `counter()` 多次，`count` 变量将在同一位置增加到 `2`，`3` 等。
 

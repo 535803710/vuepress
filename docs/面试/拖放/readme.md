@@ -53,7 +53,9 @@ ball.onmousedown = function (event) {
 ```
 
 如果运行会发现，拖放的开始时候有些问题，这是因为浏览器对图片有自己的默认操作，我们需要将其屏蔽。
-![拖放2.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/38721882687a4d12995de15b4981cfcf~tplv-k3u1fbpfcp-watermark.image?)
+
+![拖放2.gif](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/2a67e0864606383018683cc2ed706e90.gif)
+<!-- ![拖放2.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/38721882687a4d12995de15b4981cfcf~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ```js
 ball.ondragstart = function () {
@@ -90,7 +92,8 @@ ball.style.left = event.pageX - shiftX + "px";
 ball.style.top = event.pageY - shiftY + "px";
 ```
 
-![拖放3.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2814f5b83d2d43f69572c6c50534e223~tplv-k3u1fbpfcp-watermark.image?)
+![拖放3.gif](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/2b72fc2795bfb02ec927a7c93c357d42.gif)
+<!-- ![拖放3.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2814f5b83d2d43f69572c6c50534e223~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ### 拖动到对应位置的提示
 
@@ -117,8 +120,8 @@ ball.style.top = event.pageY - shiftY + "px";
 <div style="background:blue" onmouseover="alert('never works')"></div>
 <div style="background:red" onmouseover="alert('over red!')"></div>
 ```
-
-![拖放4.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4d72924481014a9cb49777d753c4efd5~tplv-k3u1fbpfcp-watermark.image?)
+![拖放4.gif](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/5e0b7e1cf93f8832086eb0febd3d7fb9.gif)
+<!-- ![拖放4.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4d72924481014a9cb49777d753c4efd5~tplv-k3u1fbpfcp-watermark.image?) -->
 
 所以我们需要使用另外一个方法 `document.elementFromPoint(clientX, clientY)`，这个方法我们可以知道坐标下面的元素，如果有多个元素返回最上面的。
 
@@ -176,7 +179,9 @@ function onMouseMove(event) {
 ```
 
 呈现最后实现的效果。
-![拖放5.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cccba264f571472ebbada982bf502cb5~tplv-k3u1fbpfcp-watermark.image?)
+
+![拖放5.gif](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/b2c47e6697d919fd3d37bc5f241cebb0.gif)
+<!-- ![拖放5.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cccba264f571472ebbada982bf502cb5~tplv-k3u1fbpfcp-watermark.image?) -->
 
 
 

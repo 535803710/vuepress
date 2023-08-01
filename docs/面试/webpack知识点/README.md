@@ -42,6 +42,7 @@
 
 如果是一次流程 走到输出就结束了 但是如果监听模式，就会重复编译，如下
 
-![监听模式的构建流程.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a64b3ed9e4d41c3b3e87409dc344c5d~tplv-k3u1fbpfcp-watermark.image?)
+![监听模式的构建流程](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/7bc6f5dc69faad9efa9a7d4a73401989.png)
+<!-- ![监听模式的构建流程.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a64b3ed9e4d41c3b3e87409dc344c5d~tplv-k3u1fbpfcp-watermark.image?) -->
 
 

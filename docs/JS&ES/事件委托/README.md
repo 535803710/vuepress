@@ -89,7 +89,8 @@ elem.addEventListener(..., true)
 
 第一个想法可能是为每个按钮分配一个单独的处理程序。但是有一个更优雅的解决方案。我们可以为整个菜单添加一个处理程序，并为具有方法调用的按钮添加 `data-action` 特性（attribute）：
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c7d693eb7f964522974c2e956b3dce4c~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/71176f7efaaaf87fc9349ba3c6a769d9.png)
+<!-- ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c7d693eb7f964522974c2e956b3dce4c~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ## 总结
 

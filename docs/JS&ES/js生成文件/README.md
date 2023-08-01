@@ -1,4 +1,3 @@
-持续创作，加速成长！这是我参与「掘金日新计划 · 6 月更文挑战」的第1天，[点击查看活动详情](https://juejin.cn/post/7099702781094674468 "https://juejin.cn/post/7099702781094674468")
 # 通过原生 JS 完成 html 文件的生成
 >当我们想不依靠服务端，只靠前端的api来生成html文件的时候
 ## 相关实现
@@ -6,7 +5,8 @@
 - 前端生成图片
   
   
-![js生成html.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c40ca26cb6c4e50b8af2991b4717791~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/10cd2ac4bfa3009345f50f00226760cf.gif)
+<!-- ![js生成html.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c40ca26cb6c4e50b8af2991b4717791~tplv-k3u1fbpfcp-watermark.image?) -->
 
 
 ## 知识点

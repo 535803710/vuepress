@@ -119,13 +119,16 @@ return async () => {
 首先将 `task` 注册成5个拦截切面存放在 `aspects` 中。
 
 在调用 `run` 函数的时候，会使用 `reduceRight()` 方法，从最后一个元素开始，每次都包裹一层函数再外面，所以会得到5 个切面会拼接成如下
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c701ea68031740889d117fe9a7dd1d59~tplv-k3u1fbpfcp-watermark.image?)\*\*\*\*
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/70f2401b2f0e7548b1f228eefe45ed01.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c701ea68031740889d117fe9a7dd1d59~tplv-k3u1fbpfcp-watermark.image?) -->
 
 通过下图可以比较好的理解
 
 这个洋葱模型执行结果如下
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/047426250f394aaab47fb387f03032ce~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/8f3aff48ebb79cb3d390bb014e2c9e0f.png)
+<!-- ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/047426250f394aaab47fb387f03032ce~tplv-k3u1fbpfcp-watermark.image?) -->
 
 这是一个层层深入的异步嵌套调用模型，但写法上却是同步的写法。
 

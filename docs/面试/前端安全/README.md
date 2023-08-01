@@ -1,6 +1,7 @@
 # 前端安全问题
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cb8128580eea45ff955ee50bfb30d2f4~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/886f8414525fcacb3aaa9ee184f44125.webp)
+<!-- ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cb8128580eea45ff955ee50bfb30d2f4~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?) -->
 
 ## XSS
 

@@ -14,7 +14,9 @@
 ## 什么是状态机
 
 最简单的例子就是红绿灯
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8880da526724ed18823e65938b13c99~tplv-k3u1fbpfcp-watermark.image?)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/d142240c6a9ea3610bd2492c58bb52ba.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8880da526724ed18823e65938b13c99~tplv-k3u1fbpfcp-watermark.image?) -->
 
 概念：
 - 状态(state)：可以有很多种状态，当然这些状态是有限的，**每个FSM都有一个初始状态**。例如：开关可以划分为开启状态、关闭状态；红绿灯可以划分为关、一档、二档、三档等状态。
@@ -35,7 +37,8 @@
 
 下面就需要考虑状态是如何转换
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67c9025246274510acf146abaa2fafbb~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/547a6e0a7837c45b9cefb6926d0cbc62.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67c9025246274510acf146abaa2fafbb~tplv-k3u1fbpfcp-watermark.image?) -->
 
 
 箭头指向就是展示的一个状态通过事件转换到另一种状态，这些状态过度我们都可以实现动画。
@@ -105,7 +108,8 @@ function transitionButton(currentState, event) {
 
 那么解析器是如何操作的呢？
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62404aab940c4b31a216055bdad2dfb0~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/a98ff20736fbadb9ba32a09f71afbe9d.png)
+<!-- ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62404aab940c4b31a216055bdad2dfb0~tplv-k3u1fbpfcp-watermark.image?) -->
 
 用普通话翻译一下上面的图
 - 状态机开始处于初始状态

@@ -36,7 +36,8 @@
 如果连接失败或丢失，浏览器会重新发起一个请求。
 
 ### 如图所示
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/020275eb192b4ecd9b7f0b5f8e62af1f~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/bed0555adfa967718cff424d81df7125.png)
+<!-- ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/020275eb192b4ecd9b7f0b5f8e62af1f~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ### 实现代码
 ```` js

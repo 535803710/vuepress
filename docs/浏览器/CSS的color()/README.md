@@ -1,5 +1,6 @@
 # CSS 中的`color()`函数
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a97edebc54b4f7d8f2f7bae2f987fb3~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/a925125ec481da8c4d13ae8228a1e7bc.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a97edebc54b4f7d8f2f7bae2f987fb3~tplv-k3u1fbpfcp-watermark.image?) -->
 ## 背景
 
 6 月 google 发了新的博客：关于 color()已经被所有主流的引擎支持。下面是文章链接: [New CSS color spaces and functions in all major engines]('https://web.dev/color-spaces-and-functions/')

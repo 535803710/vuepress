@@ -41,7 +41,8 @@
 
 小程序渲染层和逻辑层分别由两个线程控制，渲染层使用 `webview` 渲染，逻辑层使用 `JSCore` 运行 `JavaScript` 代码。
 
-![双线程](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b29e220dcf3241a7aad242055c0f8b0c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![双线程](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/2f4750033e94f01570d60206a85441ac.webp)
+<!-- ![双线程](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b29e220dcf3241a7aad242055c0f8b0c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 小程序逻辑层和渲染层分开运行，渲染层可以有多个 webview ，两个线程通过 Native 层统一处理。
 
@@ -71,9 +72,12 @@
 
 ### WXML 语法设计思路
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53f097976ab64d8e940fd61144ebdafd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/39dab457048f0395da3a088306a52008.webp)
+<!-- ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53f097976ab64d8e940fd61144ebdafd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 通过 `Exparser框架` 将小程序的 WXML 转换为 `webComponents` 的自定义标签。 将上图转化为下图
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d16937a3e0045efbfabcfd4894fd3dc~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/a277680b263a7bb723a4229235a006dc.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d16937a3e0045efbfabcfd4894fd3dc~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 > 因为 html 可以通过脚本来改变，为了安全需要将 webComponents 转成自定义标签
 
@@ -113,7 +117,8 @@
 - window.customElement.get('custom-component') // 返回已定义的自定义元素的构造函数
 - window.customElement.whenDefined('custom-component') // 接收一个 promise 对象，是当定义自定义元素时返回的，可监听元素状态变化但无法捕捉内部状态值。
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bf9bad534b0c4068940193ffd8a2de0c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/9935d21078a301a3f6846046cfd4c20a.webp)
+<!-- ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bf9bad534b0c4068940193ffd8a2de0c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 #### Template 规范
 
@@ -166,7 +171,8 @@ Exparser 的事件系统完全模仿 Shadow DOM 的事件系统。在通常的�
 
 在自定义组件中使用 triggerEvent 触发事件时，可以指定事件的 bubbles、composed 和 capturePhase 属性，用于标注事件的冒泡性质。这一点和前面讲的自定义事件相互呼应，triggerEvent 可以理解为小程序中的自定义事件 [createEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createEvent) 。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8337ac81330416b92258ec86239e605~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/6de8e083b5a7d94bd05ad08da7b465cf.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8337ac81330416b92258ec86239e605~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 ## WXSS 编译原理及动态适配
 
@@ -194,7 +200,8 @@ wxss 会先被编译为 js 文件
 
 #### 设备信息
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a869ebcf8aed435cb1a054b210faafed~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/ad33e2884c5b847802f12d2760cab6a4.webp)
+<!-- ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a869ebcf8aed435cb1a054b210faafed~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 #### 转换 rpx 部分
 
@@ -226,14 +233,17 @@ number = Math.floor(number + eps);
 
 #### setCssToHead 函数将样式插入到 head
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/411a61d797ce465c8bdd126ab4bbe6fc~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/4fe477408d2e6f86dba14e21962a8081.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/411a61d797ce465c8bdd126ab4bbe6fc~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 主要功能
 将 wxss 的文件内容数据结构改变，方便 `makeup` 组装，将有 rpx 单位的数据改成[0,20] 这样。transformRPX 转换 。
 
 **makeup 组装之后，创建`<style>`标记，插入到`<head>`中。**
 
 在渲染层中使用 `eval` 方法执行上面编译后的 js 文件，然后插入到 head 中
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7133062a9b514d169a52cdc6803f35e2~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/8b32c80bf539bc4e768d4b8cf69b1e2b.webp)
+<!-- ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7133062a9b514d169a52cdc6803f35e2~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 ## VirtualDOM 渲染流程
 
@@ -253,7 +263,9 @@ var generateFunc = $gwx(decodeName);
 返回的是 generateFunc()
 
 generateFunc() 执行的时候需要动态注入数据，生成 DOM 树
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/003c00d6dbbe43a4818173661db53a40~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/5861fd7f73d3b7c8be37c527f973b9b0.webp)
+<!-- ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/003c00d6dbbe43a4818173661db53a40~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 ## 事件系统和通讯系统
 
@@ -289,11 +301,14 @@ WXML 需要处理成 HTML 结构在可以完成事件绑定
 函数 C 的返回值触发目标元素的 exparser 事件，通过 exparser.Event.dispatchEvent 方法，执行这个方法就会走 exparser 事件系统的流程。看到这里忘了的可以回顾一下 exparser 组件系统章节。
 
 流程如下
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b58e0e358c4340688f3f16fbef30158c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/20273afb28f212f82dd9e15224c9f7b0.webp)
+<!-- ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b58e0e358c4340688f3f16fbef30158c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 ### 通讯系统
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2eb7e12a87f145d19a016e2bb9f503b5~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/2f4750033e94f01570d60206a85441ac.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2eb7e12a87f145d19a016e2bb9f503b5~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 可以看到 sendData 并不是直接指向逻辑层的（也就是 Event 这两条线）。小程序逻辑层和渲染层的通信会由 `Native` （微信客户端）做中转，逻辑层发送网络请求也经由 `Native` 转发。
 
@@ -303,11 +318,13 @@ WXML 需要处理成 HTML 结构在可以完成事件绑定
 
 ### js 结构
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cac8fa64eb484336b7b3b88ead5807da~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/0ee8193bff5edeefaba28652dacd36b9.webp)
+<!-- ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cac8fa64eb484336b7b3b88ead5807da~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 data 和 view 相互绑定，WXML 中的动态数据就是 data，使用 setData 改变 data
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/353ba899cbf647b49b61f2040703089b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/318bf472d2ed6a66a47369f255b9b6a4.webp)
+<!-- ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/353ba899cbf647b49b61f2040703089b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 两个线程同时进行，渲染层完成初始化后通知逻辑层，逻辑层完成初始化返回初始 Data
 
@@ -315,7 +332,9 @@ data 和 view 相互绑定，WXML 中的动态数据就是 data，使用 setData
 
 生命周期也是挂在在 data 同一级。
 配合整体架构图来看一下生命周期。
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ce58a08a0adf4f71991792d45428cb0e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/56ee85c542b3bcb3b2e34c2dd2cfe1aa.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ce58a08a0adf4f71991792d45428cb0e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 小程序的每个页面都是一个 webview 实例，但是逻辑层中只有一个 APP 实例，所有页面的逻辑都在一个逻辑线程中执行。
 
@@ -325,7 +344,8 @@ data 和 view 相互绑定，WXML 中的动态数据就是 data，使用 setData
 
 这样类似多页面，保留上一个页面的状态，这里对于 webview 的添加或删除都会有一个载体来维护，这就是路由栈。
 
-![打开页面的路由内部流程](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7d21182563a546e983f869c59975c788~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![打开页面的路由内部流程](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/a5dd1728ef520eeef2073598d132a3b8.webp)
+<!-- ![打开页面的路由内部流程](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7d21182563a546e983f869c59975c788~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 打开页面的路由内部流程
 
 ## 扩展

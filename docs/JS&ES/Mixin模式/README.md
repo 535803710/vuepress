@@ -94,7 +94,8 @@ new User("Dude").sayHi(); // Hello Dude!
 
 示意图如下
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6095c86ac6ca4a4ca8600712c9f2f933~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/2de1d7f26b5cf32d1fcf16cb3d4beeee.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6095c86ac6ca4a4ca8600712c9f2f933~tplv-k3u1fbpfcp-watermark.image?) -->
 
 这是因为方法 sayHi 和 sayBye 最初是在 sayHiMixin 中创建的。因此，即使复制了它们，但是它们的 [[HomeObject]] 内部属性仍引用的是 sayHiMixin，如上图所示。
 

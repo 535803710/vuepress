@@ -41,8 +41,8 @@
     - [HTTPS 协议详解](#https-协议详解)
 
 ## 计算机网络概述
-
-![](https://img-blog.csdnimg.cn/img_convert/9b0e259a058e1e338ab3e50e728a2156.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/2af488004591cbc12cd82c44518523de.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/9b0e259a058e1e338ab3e50e728a2156.png) -->
 
 ### 计算机网络的分类
 
@@ -51,16 +51,21 @@
 
 ### 计算机网络的层次结构
 
-![](https://img-blog.csdnimg.cn/img_convert/67df7eca8ba486a7282bef74321e2722.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/6a6fccfaac44b81a7f59a01240e3ca6d.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/67df7eca8ba486a7282bef74321e2722.png) -->
+
 TCP/IP 四层模型与 OSI 体系结构对比：
-![](https://img-blog.csdnimg.cn/img_convert/c2b921fd2023201a457a2b07fe3e8e9a.png)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/03070909d619a65a9bba4bade83eee0f.jpeg)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/c2b921fd2023201a457a2b07fe3e8e9a.png) -->
 
 ### 层次结构设计的基本原则
 
 - 各层之间是相互独立的；
 - 每一层需要有足够的灵活性；
 - 各层之间完全解耦。
-  ![](https://img-blog.csdnimg.cn/img_convert/ca899d9a067e8c6d6650f1b5f229648b.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/e3e93a046c87c399eaa35550345474b3.png)
+  <!-- ![](https://img-blog.csdnimg.cn/img_convert/ca899d9a067e8c6d6650f1b5f229648b.png) -->
 
 ### 计算机网络的性能指标
 
@@ -99,10 +104,12 @@ TCP/IP 四层模型与 OSI 体系结构对比：
 4. 两个重要设备名称：网桥和交换机。
 5. 封装成帧：**“帧”是数据链路层数据的基本单位**：
 
-![](https://img-blog.csdnimg.cn/img_convert/969de8a50812f7772ed5cfef6969bef1.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/db548719cb16239e9e00fa3aac1768a1.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/969de8a50812f7772ed5cfef6969bef1.png) -->
 
 透明传输：“透明”是指即使控制字符在帧数据中，但是要当做不存在去处理。即在控制字符前加上转义字符 ESC。
-![](https://img-blog.csdnimg.cn/img_convert/40172930e675aa1e9b6d4852239144fc.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/0f815066c1afd8421738a46448a74186.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/40172930e675aa1e9b6d4852239144fc.png) -->
 
 ### 数据链路层的差错监测
 
@@ -116,14 +123,16 @@ TCP/IP 四层模型与 OSI 体系结构对比：
 最大传输单元 MTU(Maximum Transmission Unit)，数据链路层的数据帧不是无限大的，数据帧长度受 MTU 限制.
 
 路径 MTU：由链路中 MTU 的最小值决定。
-![](https://img-blog.csdnimg.cn/img_convert/437533a74e891aa9c7dcd3ccb94440a4.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/2359d0b30f0f7edc156d59438cc7692e.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/437533a74e891aa9c7dcd3ccb94440a4.png) -->
 
 ### 以太网协议详解
 
 MAC 地址：每一个设备都拥有唯一的 MAC 地址，共 48 位，使用十六进制表示。
 
 以太网协议：是一种使用广泛的局域网技术，是一种应用于数据链路层的协议，使用以太网可以完成相邻设备的数据帧传输：
-![](https://img-blog.csdnimg.cn/img_convert/06765dad404a72429bead8950c219c10.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/6ba3a65d5f27e58945630bd5ded6bc20.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/06765dad404a72429bead8950c219c10.png) -->
 
 局域网分类：
 Ethernet 以太网 IEEE802.3：
@@ -163,29 +172,35 @@ MAC 地址（物理地址、局域网地址）
    2. ICMP 协议（Internet Control Message Protocol，因特网控制报文协议）;
    3. ARP 协议（Address Resolution Protocol，地址解析协议）;
    4. RARP 协议（Reverse Address Resolution Protocol，逆地址解析协议）。 4.重要的设备：路由器。
-      ![](https://img-blog.csdnimg.cn/img_convert/e976bb4dcb58a55615d825b0a808ebf0.png)
+      ![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/a7cdd675ec1dadb854463d4f5539e244.png)
+      <!-- ![](https://img-blog.csdnimg.cn/img_convert/e976bb4dcb58a55615d825b0a808ebf0.png) -->
 
 ### IP 协议详解
 
 IP 网际协议是 Internet 网络层最核心的协议。虚拟互联网络的产生：实际的计算机网络错综复杂；物理设备通过使用 IP 协议，屏蔽了物理网络之间的差异；当网络中主机使用 IP 协议连接时，无需关注网络细节，于是形成了虚拟网络。
-![](https://img-blog.csdnimg.cn/img_convert/1512f8a9907449f746288ef22db5fa3a.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/15b2427c6a97739da840afde67147389.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/1512f8a9907449f746288ef22db5fa3a.png) -->
 
 IP 协议使得复杂的实际网络变为一个虚拟互联的网络；并且解决了在虚拟网络中数据报传输路径的问题。
-![](https://img-blog.csdnimg.cn/img_convert/dc7ef170f6522ce68e09c59f0450ab14.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/978e492a01dc6e76345c667e4211992a.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/dc7ef170f6522ce68e09c59f0450ab14.png) -->
 
 其中，版本指 IP 协议的版本，占 4 位，如 IPv4 和 IPv6；首部位长度表示 IP 首部长度，占 4 位，最大数值位 15；总长度表示 IP 数据报总长度，占 16 位，最大数值位 65535；TTL 表示 IP 数据报文在网络中的寿命，占 8 位；协议表明 IP 数据所携带的具体数据是什么协议的，如 TCP、UDP。
 
 ### IP 协议的转发流程
 
-![](https://img-blog.csdnimg.cn/img_convert/2b15d397bb6ae792c4f786a39a3a3a1e.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/960d4002cb8fd18ecdc62b7e045d635c.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/2b15d397bb6ae792c4f786a39a3a3a1e.png) -->
 
 ### IP 地址的子网划分
 
-![](https://img-blog.csdnimg.cn/img_convert/81ecde62bf5383da3864b011575d436d.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/d46268e861a4e6fa43f792f9447707ae.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/81ecde62bf5383da3864b011575d436d.png) -->
 
 A 类（8 网络号+24 主机号）、B 类（16 网络号+16 主机号）、C 类（24 网络号+8 主机号）可以用于标识网络中的主机或路由器，D 类地址作为组广播地址，E 类是地址保留。
 
-![](https://img-blog.csdnimg.cn/img_convert/ccc6e95f8657ca6094042cfaa0c21b6c.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/a4d5983fa4181aee7a97568ceb9376df.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/ccc6e95f8657ca6094042cfaa0c21b6c.png) -->
 
 ### 网络地址转换 NAT 技术
 
@@ -201,14 +216,16 @@ NAT 工作原理：
 地址解析协议 ARP（Address Resolution Protocol）：为网卡（网络适配器）的 IP 地址到对应的硬件地址提供动态映射。可以把网络层 32 位地址转化为数据链路层 MAC48 位地址。
 
 ARP 是即插即用的，一个 ARP 表是自动建立的，不需要系统管理员来配置。
-![](https://img-blog.csdnimg.cn/img_convert/442e827fe069e4958f4cbedcc2f2fa13.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/8750c53b2e4fd3c23776d4dc8646b51b.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/442e827fe069e4958f4cbedcc2f2fa13.png) -->
 
 RARP(Reverse Address Resolution Protocol)协议指逆地址解析协议，可以把数据链路层 MAC48 位地址转化为网络层 32 位地址。
 
 ### ICMP 协议详解
 
 网际控制报文协议（Internet Control Message Protocol），可以报告错误信息或者异常情况，ICMP 报文封装在 IP 数据报当中。
-![](https://img-blog.csdnimg.cn/img_convert/c5171aa88d22fe5055d682bb1d9681de.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/399556a04f6d042413ba3b6eb452f29c.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/c5171aa88d22fe5055d682bb1d9681de.png) -->
 
 ICMP 协议的应用：
 
@@ -252,7 +269,8 @@ OSPF 协议优点：
 
 RIP 与 OSPF 的对比（路由算法决定其性质）：
 
-![](https://img-blog.csdnimg.cn/img_convert/0455a0dbe6b9689b32a117e9ab2db3e0.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/f730298c539d55759afa64f00714b567.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/0455a0dbe6b9689b32a117e9ab2db3e0.png) -->
 
 ### 外部网关路由协议之 BGP 协议
 
@@ -271,14 +289,17 @@ BGP（Border Gateway Protocol）边际网关协议【应用层】：是运行在
 1. 传输层负责将上层数据分段并提供端到端的、可靠的或不可靠的传输以及端到端的差错控制和流量控制问题；
 2. 包含的主要协议：TCP 协议（Transmission Control Protocol，传输控制协议）、UDP 协议（User Datagram Protocol，用户数据报协议）；
 3. 重要设备：网关。
-   ![](https://img-blog.csdnimg.cn/img_convert/b8b9bdad6fe98840d4b98a7c74414c44.png)
+   <!-- ![](https://img-blog.csdnimg.cn/img_convert/b8b9bdad6fe98840d4b98a7c74414c44.png) -->
+   ![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/f5bc341f7208daba5cede7f505dc7094.png)
 
-![](https://img-blog.csdnimg.cn/img_convert/3e813c4865d3c90d5c960e3febc02152.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/7bc0d2f81e070a6a098586321d37c473.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/3e813c4865d3c90d5c960e3febc02152.png) -->
 
 ### UDP 协议详解
 
 UDP(User Datagram Protocol: 用户数据报协议)，是一个非常简单的协议，
-![](https://img-blog.csdnimg.cn/img_convert/c1e2c463a94254f0e157e1ecb84051fb.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/f2b6b8afc65f63c58f3e9dab50cca6bb.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/c1e2c463a94254f0e157e1ecb84051fb.png) -->
 
 UDP 协议的特点：
 
@@ -293,12 +314,14 @@ UDP 数据报结构：
 首部:8B，四字段/2B【源端口 | 目的端口 | UDP 长度 | 校验和】
 
 数据字段：应用数据
-![](https://img-blog.csdnimg.cn/img_convert/d88a84b462bac5a52716fc0d4de42856.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/8746ccff0b6d3b292d907dda25bf15bb.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/d88a84b462bac5a52716fc0d4de42856.png) -->
 
 ### TCP 协议详解
 
 TCP(Transmission Control Protocol: 传输控制协议)，是计算机网络中非常复杂的一个协议。
-![](https://img-blog.csdnimg.cn/img_convert/7dcb2a6d779a0424a4d0dcde5ce5fdd2.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/abadf985480f2587fe9d65b098381fa0.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/7dcb2a6d779a0424a4d0dcde5ce5fdd2.png) -->
 
 TCP 协议的功能：
 
@@ -321,7 +344,8 @@ TCP 协议的特点：
 #### TCP 报文段结构：
 
 最大报文段长度：报文段中封装的应用层数据的最大长度。
-![](https://img-blog.csdnimg.cn/img_convert/90ea9c7215077889d809c598b88044b4.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/312dce341dc1fc26055650955be97cfb.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/90ea9c7215077889d809c598b88044b4.png) -->
 
 TCP 首部：
 
@@ -330,7 +354,8 @@ TCP 首部：
 - TCP 段的首部长度最短是 20B ，最长为 60 字节。但是长度必须为 4B 的整数倍
 
 TCP 标记的作用：
-![](https://img-blog.csdnimg.cn/img_convert/059e327428c4997120ecd1099fd1bab5.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/d17b6707a175a813b7103d3164b2e7b7.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/059e327428c4997120ecd1099fd1bab5.png) -->
 
 ### 可靠传输的基本原理
 
@@ -356,7 +381,8 @@ TCP 标记的作用：
 #### TCP 协议的流量控制
 
 流量控制：让发送方发送速率不要太快，TCP 协议使用滑动窗口实现流量控制。
-![](https://img-blog.csdnimg.cn/img_convert/00f26c96e91c4bf95ef197940d0127f6.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/329713d761528531dc5e03c0893023f9.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/00f26c96e91c4bf95ef197940d0127f6.png) -->
 
 ### TCP 协议的拥塞控制
 
@@ -368,13 +394,15 @@ TCP 标记的作用：
 2. 到达阈值时进入【拥塞避免】，变成+1 增长；
 3. 【超时】，阈值变为当前 cwnd 的一半（不能<2）；
 4. 再从【慢开始】，拥塞窗口从 1 指数增长。
-   ![](https://img-blog.csdnimg.cn/img_convert/6fff690ce568963043be6792251f4904.png)
+   ![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/7a97677fdce7d8219e4414674d315938.png)
+   <!-- ![](https://img-blog.csdnimg.cn/img_convert/6fff690ce568963043be6792251f4904.png) -->
 
 快重传和快恢复：
 
 - 发送方连续收到 3 个冗余 ACK，执行【快重传】，不必等计时器超时；
 - 执行【快恢复】，阈值变为当前 cwnd 的一半（不能<2），并从此新的 ssthresh 点进入【拥塞避免】。
-  ![](https://img-blog.csdnimg.cn/img_convert/77ff4adc711a615a88840a8abd37f1a0.png)
+  ![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/8a6ef469792f7db44aa848c896af7b72.png)
+  <!-- ![](https://img-blog.csdnimg.cn/img_convert/77ff4adc711a615a88840a8abd37f1a0.png) -->
 
 ### TCP 连接的三次握手（重要）
 
@@ -393,7 +421,8 @@ TCP 三次握手使用指令：
 第二次：服务器发回确认报文段，同意建立新连接的确认段（SYN=1），确认序号字段有效（ACK=1），服务器告诉客户端报文段序号是 y（seq=y），表示服务器已经收到客户端序号为 x 的报文段，准备接受客户端序列号为 x+1 的报文段（ack_seq=x+1）；服务器由 LISTEN 进入 SYN_RCVD （同步收到状态）;
 
 第三次:客户对服务器的同一连接进行确认.确认序号字段有效(ACK=1),客户此次的报文段的序列号是 x+1(seq=x+1),客户期望接受服务器序列号为 y+1 的报文段(ack_seq=y+1);当客户发送 ack 时，客户端进入 ESTABLISHED 状态;当服务收到客户发送的 ack 后，也进入 ESTABLISHED 状态;第三次握手可携带数据;
-![](https://img-blog.csdnimg.cn/img_convert/1ad3ae0f896df40cfe163e93ca43ab11.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/dc84424c5323fe09589acbdfc16b3b46.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/1ad3ae0f896df40cfe163e93ca43ab11.png) -->
 
 ### TCP 连接的四次挥手（重要）
 
@@ -406,8 +435,8 @@ TCP 三次握手使用指令：
 第三次:服务器向客户发送释放连接报文段，请求释放连接（FIN=1），确认字号段有效（ACK=1），表示服务器期望接收客户数据序号为 x+1（ack_seq=x+1）;表示自己传输的第一个字节序号是 y+1（seq=y+1）；服务器状态由 CLOSE_WAIT 进入 LAST_ACK （最后确认状态）；
 
 第四次：客户向服务器发送确认段，确认字号段有效（ACK=1），表示客户传输的数据序号是 x+1（seq=x+1），表示客户期望接收服务器数据序号为 y+1+1（ack_seq=y+1+1）；客户端状态由 FIN_WAIT_2 进入 TIME_WAIT，等待 2MSL 时间，进入 CLOSED 状态；服务器在收到最后一次 ACK 后，由 LAST_ACK 进入 CLOSED；
-
-![](https://img-blog.csdnimg.cn/img_convert/b55a473f789c42124afbfd0e82a9e811.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/69f6d3667924846d097ec18d390d36df.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/b55a473f789c42124afbfd0e82a9e811.png) -->
 
 **为什么需要等待 2MSL?**
 
@@ -452,13 +481,16 @@ HTTP 请求报文方式：
 4. HEAD：请求读取 URL 标识的信息的首部，只返回报文头；
 5. OPETION：请求一些选项的信息；
 6. PUT：在指明的 URL 下存储一个文档。
-
-![](https://img-blog.csdnimg.cn/img_convert/f182c08fd961d57d8e03263df7469c23.png)
-![](https://img-blog.csdnimg.cn/img_convert/dc7492094737809454912e47f9d54ff8.png)
+   
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/1a3c682e4bdeeb49ce032af5cee04fdb.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/f182c08fd961d57d8e03263df7469c23.png) -->
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/1d017a1154447b6721352622b858d2fd.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/dc7492094737809454912e47f9d54ff8.png) -->
 
 #### HTTP 工作的结构
 
-![](https://img-blog.csdnimg.cn/img_convert/a5e08c253ea159f3ef609ae157f08750.png)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/2f1bf74ab31976e77f34aa3090778233.png)
+<!-- ![](https://img-blog.csdnimg.cn/img_convert/a5e08c253ea159f3ef609ae157f08750.png) -->
 
 #### HTTPS 协议详解
 

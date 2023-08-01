@@ -1,6 +1,8 @@
 # http缓存
 
-![](https://img-blog.csdnimg.cn/20210728133550878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTYzMzg3,size_16,color_FFFFFF,t_70)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/808ffb42cdf834744c225a81231a88f2.png)
+<!-- ![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/808ffb42cdf834744c225a81231a88f2.png) -->
+
 
 ## 强缓存
 
@@ -34,5 +36,6 @@ ETag/If-None-Match 的出现主要解决了 Last-Modified/If-Modified-Since 所�
 - 如果文件被修改了，但是内容没有任何变化的时候，Last-Modified/If-Modified-Since 会错误地返回 304 ，上面的例子就说明了这个问题
 
 ## HTTP缓存流程
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/5/10/171fea0fec0b4668~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/4bf8c40f58597b70d097f0d90703f2fe.webp)
+<!-- ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/5/10/171fea0fec0b4668~tplv-t2oaga2asx-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 

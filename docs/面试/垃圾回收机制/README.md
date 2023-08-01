@@ -18,12 +18,14 @@ JavaScript 最常用的垃圾回收策略是标记清理（mark-and-sweep）。�
 - 没有被标记的对象都会被删除。
 用图表示
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/26735c394c164342a52ea3a6d99d144a~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/4f4091b4fd3dedadc90cf78e4c557d02.png)
+<!-- ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/26735c394c164342a52ea3a6d99d144a~tplv-k3u1fbpfcp-watermark.image?) -->
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5c5920a117b84d26ab3ca991c1c577f5~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/71492b72c28e18a7376ed7a750640ff6.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5c5920a117b84d26ab3ca991c1c577f5~tplv-k3u1fbpfcp-watermark.image?) -->
 
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/81751e26c1ffdf8ee4318b548596b3e3.png)
+<!-- ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8fa959f3c8e54e17a9f07e7e0eaeb182~tplv-k3u1fbpfcp-watermark.image?) -->
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8fa959f3c8e54e17a9f07e7e0eaeb182~tplv-k3u1fbpfcp-watermark.image?)
-
-
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1082cba99ef64dc5bd269220d6d930f5~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/e4404179bb75c13239fd96ba8921cd45.png)
+<!-- ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1082cba99ef64dc5bd269220d6d930f5~tplv-k3u1fbpfcp-watermark.image?) -->

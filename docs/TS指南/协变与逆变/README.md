@@ -55,7 +55,8 @@ type DogFactory = (args: Dog) => Dog;
 
 所以 我们会有以下几种情况
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fd4537748fe4bf98bd8c1d092e92c08~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/ae354d80b7e9f35565095d307d575676.png)
+<!-- ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fd4537748fe4bf98bd8c1d092e92c08~tplv-k3u1fbpfcp-watermark.image?) -->
 
 在比较函数的参数的时候。**如果一个值能够被赋值给某个类型的变量，那么可以认为这个值的类型为此变量类型的子类型。**
 

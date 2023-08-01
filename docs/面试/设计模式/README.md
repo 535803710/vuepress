@@ -1,7 +1,8 @@
 # 常用设计模式
 ## 策略模式
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/686f57c143284ecf9c00b48f3464b3b8~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/08fe0dcf26c221ca6173801897f5e726.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/686f57c143284ecf9c00b48f3464b3b8~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 
 - 先配置策略
 ```js
@@ -59,7 +60,9 @@ var compose1 = () => {
 
 
 ## 发布订阅模式
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66f97bd23566468182554fbac39fd009~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/d91f67312326797fb5a12672cb29b078.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66f97bd23566468182554fbac39fd009~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp) -->
 ``` js
 const EventEmit = function() {
   this.events = {};

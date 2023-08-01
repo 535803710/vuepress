@@ -2,7 +2,8 @@
 
 ## 问题
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/572fa6ddbc6041bb86b2b71c5283a9a4~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/1112f7b5fec24bb7e408e2a08bb11bc2.png)
+<!-- ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/572fa6ddbc6041bb86b2b71c5283a9a4~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ```ts
 const arr = ref([{ name: "a" }, { name: "b" }, { name: "c" }, { name: "d" }]);

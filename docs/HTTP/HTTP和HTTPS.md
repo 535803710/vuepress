@@ -36,8 +36,8 @@ id8-->id13(接收和解析响应)
 ```
 
 ## HTTP 结构
-
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/89ed869c7f704629b7b4d1c80dc53110~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/4e36e875fea93c76dd5c52c06c77bbd9.png)
+<!-- ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/89ed869c7f704629b7b4d1c80dc53110~tplv-k3u1fbpfcp-watermark.image?) -->
 
 ### 请求方法
 
@@ -72,8 +72,8 @@ HTTP 响应报文第一行为状态行,包含 HTTP 协议版本和状态码。�
 它通过传输层安全协议加密HTTP报文,保证传输过程的安全性。
 
 ## HTTPS工作原理
-
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d4759993c6047fa9a994921f118242b~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/07/6b75d29cf85ebccfcc79be81f981ae13.png)
+<!-- ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d4759993c6047fa9a994921f118242b~tplv-k3u1fbpfcp-watermark.image?) -->
 HTTPS在HTTP与TCP之间加入了SSL/TLS层,基本工作流程如下:
 1. 客户端访问网络服务器,请求与服务器建立SSL连接。客户端发送支持的加密算法和协议版本等信息。
 2. 服务器从多个加密算法和协议版本中选定一套,返回数字证书。证书中包含服务器的公钥及证书颁发机构的信息,用于验证服务器的身份。

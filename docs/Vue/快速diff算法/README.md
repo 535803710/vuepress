@@ -7,7 +7,8 @@
 
 # 第一部分 相同的前置节点和后置节点
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2e3205f11ad74f619f7e051d62d462cc~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/dba345988e7b7a2fbabf1725228f1031.png)
+<!-- ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2e3205f11ad74f619f7e051d62d462cc~tplv-k3u1fbpfcp-watermark.image?) -->
 
 - 开启一个从头向尾的循环，判断 新旧节点的 key 是否相同，不相同退出
 - 开启一个从尾向头的循环，判断 新旧节点的 key 是否相同，不相同退出
@@ -17,7 +18,8 @@
 
 # 第二部分 判断是否需要进行 DOM 的移动
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b43ebc94bf848908344b5401949791c~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/3f8b536f81f222b473575cc0cf621df7.png)
+<!-- ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b43ebc94bf848908344b5401949791c~tplv-k3u1fbpfcp-watermark.image?) -->
 
 - 构建一个 sources 数组，用于存放，新节点对应旧节点组中的索引
   - 遍历新节点组，将其 `el.key` 作为`[key]`,index 作为 `[value]` 保存为一个**索引表**
@@ -27,7 +29,8 @@
 
 # 第三部分 移动元素
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b448a28f1984360aba18bafea2b8832~tplv-k3u1fbpfcp-watermark.image?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/e6f592d4bc4f6a557358527659a7db3d.png)
+<!-- ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b448a28f1984360aba18bafea2b8832~tplv-k3u1fbpfcp-watermark.image?) -->
 
 - 通过 `source` 计算出**最长递增子序列** `seq`数组，表示最长递增子序列在`source`中的索引
 

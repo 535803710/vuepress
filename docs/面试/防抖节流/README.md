@@ -4,7 +4,8 @@
 
 ## 防抖
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/536c3fccd39549e6b84788f3417c9a21~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/28c2ab8013ba9b4092c5f2c28d42e434.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/536c3fccd39549e6b84788f3417c9a21~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?) -->
 
 ### 原理
 
@@ -46,7 +47,8 @@ a(4); //5
 
 ## 节流
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92f6baa40d7d4840a80b1d9c0f28d506~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
+![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/31ab2db088a7e965f4d989b182bfbfd0.webp)
+<!-- ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92f6baa40d7d4840a80b1d9c0f28d506~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?) -->
 
 ### 原理
 
