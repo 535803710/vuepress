@@ -28,6 +28,8 @@ module.exports = {
           "/JS&ES/Proxy/",
           "/JS&ES/深入模块import 和require/",
           "/JS&ES/Mixin模式/",
+          "/JS&ES/动态创建WebWorker/",
+          "/JS&ES/JavaScript异步编程和事件循环详解/",
         ],
       },
       {
