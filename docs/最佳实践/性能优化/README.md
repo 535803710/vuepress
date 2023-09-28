@@ -37,6 +37,7 @@
 
 ### 加载策略
 - 懒加载
+- [预请求 Prefetching](../预请求策略/README.md)
 - DNS预解析、预加载、预渲染
 - 离线化（[serviceWorker](https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorker)、AppCache、离线包）
 - [HTTP缓存](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Caching)
