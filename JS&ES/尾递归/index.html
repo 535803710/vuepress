@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>执行上下文和堆栈 | 前端小蜗</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/vuepress/img/home.jpeg">
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/vuepress/assets/css/0.styles.189cad16.css" as="style"><link rel="preload" href="/vuepress/assets/js/app.873b058d.js" as="script"><link rel="preload" href="/vuepress/assets/js/2.cf1e524c.js" as="script"><link rel="preload" href="/vuepress/assets/js/20.796bfd0d.js" as="script"><link rel="prefetch" href="/vuepress/assets/js/10.641b8afa.js"><link rel="prefetch" href="/vuepress/assets/js/11.0916261b.js"><link rel="prefetch" href="/vuepress/assets/js/12.4b32e75f.js"><link rel="prefetch" href="/vuepress/assets/js/13.c7126d4d.js"><link rel="prefetch" href="/vuepress/assets/js/14.cfcaea89.js"><link rel="prefetch" href="/vuepress/assets/js/15.79772df2.js"><link rel="prefetch" href="/vuepress/assets/js/16.db04793e.js"><link rel="prefetch" href="/vuepress/assets/js/17.77e08c63.js"><link rel="prefetch" href="/vuepress/assets/js/18.76c802fe.js"><link rel="prefetch" href="/vuepress/assets/js/19.9212cd84.js"><link rel="prefetch" href="/vuepress/assets/js/21.756c9a96.js"><link rel="prefetch" href="/vuepress/assets/js/22.99980a80.js"><link rel="prefetch" href="/vuepress/assets/js/23.71d25201.js"><link rel="prefetch" href="/vuepress/assets/js/24.420113ba.js"><link rel="prefetch" href="/vuepress/assets/js/25.23d34af2.js"><link rel="prefetch" href="/vuepress/assets/js/26.c78db65f.js"><link rel="prefetch" href="/vuepress/assets/js/27.7fb4996c.js"><link rel="prefetch" href="/vuepress/assets/js/28.7b13f43e.js"><link rel="prefetch" href="/vuepress/assets/js/29.aea9f3a2.js"><link rel="prefetch" href="/vuepress/assets/js/3.86f55646.js"><link rel="prefetch" href="/vuepress/assets/js/30.4e8b030b.js"><link rel="prefetch" href="/vuepress/assets/js/31.eb5a413a.js"><link rel="prefetch" href="/vuepress/assets/js/32.4de7bdf6.js"><link rel="prefetch" href="/vuepress/assets/js/33.6e905952.js"><link rel="prefetch" href="/vuepress/assets/js/34.c99617ec.js"><link rel="prefetch" href="/vuepress/assets/js/35.7df2de98.js"><link rel="prefetch" href="/vuepress/assets/js/36.336aa74b.js"><link rel="prefetch" href="/vuepress/assets/js/37.612e3b23.js"><link rel="prefetch" href="/vuepress/assets/js/38.601c1af2.js"><link rel="prefetch" href="/vuepress/assets/js/39.cfc94a0e.js"><link rel="prefetch" href="/vuepress/assets/js/4.7fc56b7b.js"><link rel="prefetch" href="/vuepress/assets/js/40.5f515d37.js"><link rel="prefetch" href="/vuepress/assets/js/41.fb38e398.js"><link rel="prefetch" href="/vuepress/assets/js/42.18e6e513.js"><link rel="prefetch" href="/vuepress/assets/js/43.f8131319.js"><link rel="prefetch" href="/vuepress/assets/js/44.5d2ea748.js"><link rel="prefetch" href="/vuepress/assets/js/45.4e872233.js"><link rel="prefetch" href="/vuepress/assets/js/46.63ba2c82.js"><link rel="prefetch" href="/vuepress/assets/js/47.bc3051f3.js"><link rel="prefetch" href="/vuepress/assets/js/48.44060215.js"><link rel="prefetch" href="/vuepress/assets/js/49.5fc2aaa1.js"><link rel="prefetch" href="/vuepress/assets/js/5.6ac62750.js"><link rel="prefetch" href="/vuepress/assets/js/50.eee8674c.js"><link rel="prefetch" href="/vuepress/assets/js/51.ddc3705f.js"><link rel="prefetch" href="/vuepress/assets/js/52.00499a5e.js"><link rel="prefetch" href="/vuepress/assets/js/53.1d534dcf.js"><link rel="prefetch" href="/vuepress/assets/js/54.3e1b5aef.js"><link rel="prefetch" href="/vuepress/assets/js/55.b5c3a152.js"><link rel="prefetch" href="/vuepress/assets/js/56.087a2313.js"><link rel="prefetch" href="/vuepress/assets/js/57.2cb5267c.js"><link rel="prefetch" href="/vuepress/assets/js/58.d1c5c12b.js"><link rel="prefetch" href="/vuepress/assets/js/59.0750158b.js"><link rel="prefetch" href="/vuepress/assets/js/6.8c92a04b.js"><link rel="prefetch" href="/vuepress/assets/js/60.217e96fc.js"><link rel="prefetch" href="/vuepress/assets/js/61.f5f7cd99.js"><link rel="prefetch" href="/vuepress/assets/js/62.528792f5.js"><link rel="prefetch" href="/vuepress/assets/js/63.358b19e0.js"><link rel="prefetch" href="/vuepress/assets/js/64.4f3d196e.js"><link rel="prefetch" href="/vuepress/assets/js/65.5c70fdd6.js"><link rel="prefetch" href="/vuepress/assets/js/66.72bb413a.js"><link rel="prefetch" href="/vuepress/assets/js/67.de8108db.js"><link rel="prefetch" href="/vuepress/assets/js/68.64400c91.js"><link rel="prefetch" href="/vuepress/assets/js/69.5550e646.js"><link rel="prefetch" href="/vuepress/assets/js/7.b60f99e7.js"><link rel="prefetch" href="/vuepress/assets/js/70.673ddb2c.js"><link rel="prefetch" href="/vuepress/assets/js/71.25ac780a.js"><link rel="prefetch" href="/vuepress/assets/js/72.9dd4139e.js"><link rel="prefetch" href="/vuepress/assets/js/73.dae169b0.js"><link rel="prefetch" href="/vuepress/assets/js/74.3f499ab7.js"><link rel="prefetch" href="/vuepress/assets/js/8.d18f1e5d.js"><link rel="prefetch" href="/vuepress/assets/js/9.d4657ce3.js">
+    <link rel="stylesheet" href="/vuepress/assets/css/0.styles.189cad16.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress/" class="home-link router-link-active"><img src="/vuepress/img/home.jpeg" alt="前端小蜗" class="logo"> <span class="site-name can-hide">前端小蜗</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="https://f2e.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  前端学习路径
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://roadmap.sh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  学习路线图
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://juejin.cn/user/61995432544503" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我的其他文章
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuepress/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="https://f2e.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  前端学习路径
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://roadmap.sh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  学习路线图
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://juejin.cn/user/61995432544503" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  我的其他文章
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuepress/guide/" class="sidebar-link">介绍</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/JS&amp;ES/词法环境和闭包/" class="sidebar-heading clickable open"><span>JS相关</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepress/JS&amp;ES/%E8%AF%8D%E6%B3%95%E7%8E%AF%E5%A2%83%E5%92%8C%E9%97%AD%E5%8C%85/" class="sidebar-link">词法环境和闭包</a></li><li><a href="/vuepress/JS&amp;ES/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/" class="sidebar-link">事件委托</a></li><li><a href="/vuepress/JS&amp;ES/%E5%B0%BE%E9%80%92%E5%BD%92/" aria-current="page" class="active sidebar-link">递归，尾递归，执行上下文和堆栈</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress/JS&amp;ES/%E5%B0%BE%E9%80%92%E5%BD%92/#蹦床函数" class="sidebar-link">蹦床函数</a></li><li class="sidebar-sub-header"><a href="/vuepress/JS&amp;ES/%E5%B0%BE%E9%80%92%E5%BD%92/#深度遍历算法" class="sidebar-link">深度遍历算法</a></li></ul></li><li><a href="/vuepress/JS&amp;ES/%E6%A1%86%E6%9E%B6%E7%B1%BB%E5%9E%8B/" class="sidebar-link">框架类型（运行时，编译时，运行+编译）</a></li><li><a href="/vuepress/JS&amp;ES/js%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6/" class="sidebar-link">JS生成并下载文件</a></li><li><a href="/vuepress/JS&amp;ES/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" class="sidebar-link">原型和原型链</a></li><li><a href="/vuepress/JS&amp;ES/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/" class="sidebar-link">浏览器渲染</a></li><li><a href="/vuepress/JS&amp;ES/Proxy/" class="sidebar-link">Proxy 与 Reflect</a></li><li><a href="/vuepress/JS&amp;ES/%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9D%97import%20%E5%92%8Crequire/" class="sidebar-link">深入模块Import 和 CommonJS</a></li><li><a href="/vuepress/JS&amp;ES/Mixin%E6%A8%A1%E5%BC%8F/" class="sidebar-link">Mixin 模式深度理解</a></li><li><a href="/vuepress/JS&amp;ES/%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BAWebWorker/" class="sidebar-link">WebWorker</a></li><li><a href="/vuepress/JS&amp;ES/JavaScript%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E8%AF%A6%E8%A7%A3/" class="sidebar-link">JavaScript 异步编程和事件循环详解</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/小程序/" class="sidebar-heading clickable"><span>小程序</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/浏览器/" class="sidebar-heading clickable"><span>浏览器</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/HTTP/HTTP和HTTPS" class="sidebar-heading clickable"><span>HTTP</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/Node/拦截器/" class="sidebar-heading clickable"><span>Node</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/Vue/vue" class="sidebar-heading clickable"><span>Vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/算法/算法复杂度/" class="sidebar-heading clickable"><span>算法</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/最佳实践/" class="sidebar-heading clickable"><span>最佳实践</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/TS指南/" class="sidebar-heading clickable"><span>TypeScrpit</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vuepress/心得/" class="sidebar-heading clickable"><span>心得体会</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="执行上下文和堆栈"><a href="#执行上下文和堆栈" class="header-anchor">#</a> 执行上下文和堆栈</h1> <p>现在我们来研究一下递归调用是如何工作的。为此，我们会先看看函数底层的工作原理。</p> <p>有关正在运行的函数的执行过程的相关信息被存储在其 <strong>执行上下文</strong> 中。</p> <p><a href="https://tc39.github.io/ecma262/#sec-execution-contexts" target="_blank" rel="noopener noreferrer">执行上下文<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是一个内部数据结构，它包含有关函数执行时的详细细节：当前控制流所在的位置，当前的变量，this 的值（此处我们不使用它），以及其它的一些内部细节。</p> <p>一个函数调用仅具有一个与其相关联的执行上下文。</p> <p>当一个函数进行嵌套调用时，将发生以下的事儿：</p> <ul><li>当前函数被暂停；</li> <li>与它关联的执行上下文被一个叫做 执行上下文堆栈 的特殊数据结构保存；</li> <li>执行嵌套调用；</li> <li>嵌套调用结束后，从堆栈中恢复之前的执行上下文，并从停止的位置恢复外部函数。</li></ul> <h1 id="尾调用"><a href="#尾调用" class="header-anchor">#</a> 尾调用</h1> <blockquote><p>尾调用指的是函数的返回另一个函数的调用</p></blockquote> <h1 id="尾递归"><a href="#尾递归" class="header-anchor">#</a> 尾递归</h1> <blockquote><p>函数尾调用自身，就是尾递归</p></blockquote> <p>下面代码就是尾递归</p> <div class="language- extra-class"><pre class="language-text"><code>function pow(x, n) {
+  if (n == 1) {
+    return x;
+  } else {
+    return x * pow(x, n - 1);
+  }
+}
+
+alert( pow(2, 3) );
+
+</code></pre></div><p><strong>任何递归都可以用循环来重写。通常循环变体更有效。</strong></p> <p>……但有时重写很难，尤其是函数根据条件使用不同的子调用，然后合并它们的结果，或者分支比较复杂时。而且有些优化可能没有必要，完全不值得。</p> <p>递归可以使代码更短，更易于理解和维护。并不是每个地方都需要优化，大多数时候我们需要一个好代码，这就是为什么要使用它。</p> <h1 id="尾递归优化"><a href="#尾递归优化" class="header-anchor">#</a> 尾递归优化</h1> <h2 id="蹦床函数"><a href="#蹦床函数" class="header-anchor">#</a> 蹦床函数</h2> <div class="language- extra-class"><pre class="language-text"><code>function trampoline(f) {
+  while (f &amp;&amp; typeof f === 'function') {
+    f = f()
+  }
+  return f
+}
+
+function f(n, m = 1, o = 1) {
+  if (n &lt;= 2) {
+    return o
+  }
+  return f.bind(null, n - 1, o, m + o)
+}
+
+trampoline(f(40)) // 102334155
+trampoline(f(100000)) // Infinity
+</code></pre></div><h2 id="深度遍历算法"><a href="#深度遍历算法" class="header-anchor">#</a> 深度遍历算法</h2> <div class="language- extra-class"><pre class="language-text"><code>function tco(func) {
+  var value
+  var active = false
+  const accumulated = []
+
+  return function accumulator(...args) {
+    accumulated.push(args)
+
+    if (!active) {
+      active = true
+      while (accumulated.length) {
+        value = func.apply(this, accumulated.shift())
+      }
+      active = false
+
+      return value
+    }
+  }
+}
+
+const f = tco(function fibonacci(n, m = 1, o = 1) {
+  if (n &lt;= 2) {
+    return o
+  }
+  return f(n - 1, o, m + o)
+})
+
+f(40) // 102334155
+f(100000) // Infinity
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress/assets/js/app.873b058d.js" defer></script><script src="/vuepress/assets/js/2.cf1e524c.js" defer></script><script src="/vuepress/assets/js/20.796bfd0d.js" defer></script>
+  </body>
+</html>
