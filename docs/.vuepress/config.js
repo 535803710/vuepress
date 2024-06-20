@@ -72,6 +72,7 @@ module.exports = {
         children: [
           ["/Vue/快速diff算法/", "快速diff算法"],
           ["/Vue/双端diff算法/", "双端diff算法"],
+          ["/Vue/Vite原理/", "Vite原理"],
           ["/Vue/vue2.7注意事项/", "Vue2.7失去响应"],
           "/Vue/vue-router原理/",
           "/Vue/Pug语法/",

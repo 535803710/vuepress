@@ -98,3 +98,81 @@ dfsTraversalIterative(root);
 
 - 递归实现：代码简洁，但受限于调用栈的深度，可能导致栈溢出。
 - 显式栈实现：更加灵活，可以处理更深的树或图，但代码相对复杂。
+
+# LRU 算法 (Least Recently Used)
+
+1. 记录一个缓存列表
+2. 快读访问
+3. 更新缓存列表
+4. 淘汰超出容量限制的
+```js
+class Node {
+    constructor(key, value) {
+        this.key = key;
+        this.value = value;
+        this.prev = null;
+        this.next = null;
+    }
+}
+
+class LRUCache {
+    constructor(capacity) {
+        this.capacity = capacity;
+        this.hashMap = new Map();
+        this.head = new Node();
+        this.tail = new Node();
+        this.head.next = this.tail;
+        this.tail.prev = this.head;
+    }
+
+    get(key) {
+        if (this.hashMap.has(key)) {
+            const node = this.hashMap.get(key);
+            this.moveToHead(node);
+            return node.value;
+        }
+        return -1;
+    }
+
+    put(key, value) {
+        if (this.hashMap.has(key)) {
+            const node = this.hashMap.get(key);
+            node.value = value;
+            this.moveToHead(node);
+        } else {
+            const newNode = new Node(key, value);
+            this.hashMap.set(key, newNode);
+            this.addToHead(newNode);
+
+            if (this.hashMap.size > this.capacity) {
+                const removedNode = this.removeTail();
+                this.hashMap.delete(removedNode.key);
+            }
+        }
+    }
+
+    moveToHead(node) {
+        this.removeNode(node);
+        this.addToHead(node);
+    }
+
+    addToHead(node) {
+        node.prev = this.head;
+        node.next = this.head.next;
+        this.head.next.prev = node;
+        this.head.next = node;
+    }
+
+    removeNode(node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+    }
+
+    removeTail() {
+        const removedNode = this.tail.prev;
+        this.removeNode(removedNode);
+        return removedNode;
+    }
+}
+
+```
