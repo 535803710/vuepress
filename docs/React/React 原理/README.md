@@ -214,7 +214,7 @@ function renderWithHooks(current, workInProgress, Component, props) {
 
 `const [ number,setNumber ] = React.useState(0) `
 
-- **useState(0) 本质上做了些什么？**上面的 state 会被当前 hooks 的 memoizedState 保存下来，每一个 useState 都会创建一个 queue 里面保存了更新的信息。
+- **useState(0) 本质上做了些什么？** 上面的 state 会被当前 hooks 的 memoizedState 保存下来，每一个 useState 都会创建一个 queue 里面保存了更新的信息（上次，这次state）。
 
 - 每个 useState 创建一个更新函数 setXXX 本质上是一个 dispatchAction 里面有绑定 fiber 和 queue
 - 最后返回 memoizedState 和 dispatch

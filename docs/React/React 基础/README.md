@@ -1,13 +1,21 @@
-
 - [什么是 React 组件](#什么是-react-组件)
+  - [那么，**函数组件**和**类组件**本质的区别是什么呢？](#那么函数组件和类组件本质的区别是什么呢)
+  - [组件通信方式](#组件通信方式)
 - [State](#state)
+  - [useState 原理](#usestate-原理)
 - [Props](#props)
 - [lifeCycle](#lifecycle)
+    - [componentDidMount 替代方案](#componentdidmount-替代方案)
+    - [componentWillUnmount 替代方案](#componentwillunmount-替代方案)
+    - [componentWillReceiveProps 替代方案](#componentwillreceiveprops-替代方案)
+    - [componentDidUpdate 替代方案](#componentdidupdate-替代方案)
 - [Ref](#ref)
+  - [forwardRef 转发 Ref 解决 ref 不能跨层级捕获和传递的问题。](#forwardref-转发-ref-解决-ref-不能跨层级捕获和传递的问题)
+  - [函数组件 forwardRef + useImperativeHandle](#函数组件-forwardref--useimperativehandle)
+  - [逻辑流程图](#逻辑流程图)
 - [Context](#context)
 - [模块化 CSS](#模块化-css)
 - [HOC](#hoc)
-
 
 # 什么是 React 组件
 
@@ -55,6 +63,8 @@ dispatch 更新特点
   ```
 
 ## useState 原理
+
+[useState 原理](../React%20原理/README.md#状态派发-usestate-原理)
 
 setState 和 useState 有什么异同？
 
@@ -272,6 +282,7 @@ export default function ProviderDemo() {
 # 模块化 CSS
 
 1.  CSS Modules
+
     ```js
     import style from "./style.css";
     export default () => (
@@ -282,6 +293,7 @@ export default function ProviderDemo() {
     ```
 
 2.  CSS IN JS
+
     ```js
     import React from "react";
 
@@ -296,11 +308,11 @@ export default function ProviderDemo() {
     }
     ```
 
-
 # HOC
-HOC的产生根本作用就是解决大量的代码复用，逻辑复用问题。、
 
- **那么具体复用了哪些逻辑呢？**
+HOC 的产生根本作用就是解决大量的代码复用，逻辑复用问题。、
+
+**那么具体复用了哪些逻辑呢？**
 
 - 本质上是对渲染的控制，对渲染的控制可不仅仅指是否渲染组件，还可以像 dva 中 dynamic 那样懒加载/动态加载组件。
 - 还有一种场景，比如项目中想让一个非 Route 组件，也能通过 props 获取路由实现跳转，但是不想通过父级路由组件层层绑定 props ，这个时候就需要一个 HOC 把改变路由的 history 对象混入 props 中，于是 withRoute 诞生了。所以 HOC 还有一个重要的作用就是让 props 中混入一些你需要的东西。
@@ -315,12 +327,3 @@ HOC的产生根本作用就是解决大量的代码复用，逻辑复用问题�
 3. 可以配合 import 等 api ，实现动态加载组件，实现代码分割，加入 loading 效果。
 4. 可以通过 ref 来获取原始组件实例，操作实例下的属性和方法。
 5. 可以对原始组件做一些事件监听，错误监控等。
-
-
-
-
-
-
-
-
-
