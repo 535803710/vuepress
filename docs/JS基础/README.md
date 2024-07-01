@@ -4,7 +4,7 @@
 
 [JS 事件](./事件委托/README.md)
 
-[事件循环](./JavaScript异步编程和事件循环详解/README.md)
+[事件循环](./JavaScript异步编程和事件循环详解/README.md#_3-javascript-中的事件循环)
 
 [Promise](./Promise/README.md)
 
