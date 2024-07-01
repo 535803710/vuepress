@@ -14,7 +14,7 @@
 
 [原型和原型链](./原型和原型链/README.md)
 
-[import 和 require](./深入模块import%20和require/README.md)
+[import 和 require](./深入模块import和require/README.md)
 
 [Mixin 模式](./Mixin模式/README.md)
 
