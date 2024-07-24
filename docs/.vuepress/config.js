@@ -96,6 +96,11 @@ module.exports = {
         children: [["/算法/常见算法/", "常见算法"], "/算法/算法复杂度/"],
       },
       {
+        title: "前端工程化",
+        path: "/工程体系/",
+        children: ["/工程体系/"],
+      },
+      {
         title: "最佳实践",
         path: "/最佳实践/",
         children: [
