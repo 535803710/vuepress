@@ -22,5 +22,7 @@
 
 [CSS 的 color()](<./CSS的color()/README.md>)
 
-[V8 引擎](./浏览器渲染/README.md)
+[垃圾回收机制](../最佳实践/垃圾回收机制/README.md)
+
+[V8 引擎](./V8引擎/README.md)
 ![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2023/08/7f81b9b58b95ccfa0cee828eac417fdd.webp)
