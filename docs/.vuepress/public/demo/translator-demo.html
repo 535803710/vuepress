@@ -914,17 +914,57 @@
               <span>Translator API 不可用</span>
             `;
             translateBtn.disabled = true;
-          } else {
+          } else if (translatorCapabilities === "available") {
+            // 模型已就绪
             apiStatus.className = "status-banner success";
             apiStatus.innerHTML = `
               <span>✅</span>
               <span>Translator API 可用！可以开始使用翻译功能。</span>
             `;
             translateBtn.disabled = false;
+          } else if (translatorCapabilities === "downloadable" || translatorCapabilities === "downloading") {
+            // 需要下载模型，主动触发下载
+            apiStatus.className = "status-banner warning";
+            apiStatus.innerHTML = `
+              <span>📦</span>
+              <span>正在下载翻译模型，请稍候...</span>
+              <div id="download-progress" style="margin-top: 8px; font-size: 0.9em;">准备下载...</div>
+            `;
+            translateBtn.disabled = true;
 
-            if (translatorCapabilities === "downloadable" || translatorCapabilities === "downloading") {
-              apiStatus.innerHTML += `<div style="margin-top: 8px; font-size: 0.9em;">📦 正在下载翻译模型...</div>`;
-            }
+            // 使用 create() 主动下载模型并监听进度
+            const translator = await self.Translator.create({
+              sourceLanguage: 'zh',
+              targetLanguage: 'en',
+              monitor(m) {
+                m.addEventListener('downloadprogress', (e) => {
+                  const progress = Math.round(e.loaded * 100);
+                  console.log(`📥 下载进度: ${progress}%`);
+                  
+                  const progressEl = document.getElementById('download-progress');
+                  if (progressEl) {
+                    progressEl.innerHTML = `
+                      <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; margin-top: 4px;">
+                        <div style="width: ${progress}%; background: linear-gradient(90deg, #4CAF50, #45a049); height: 20px; transition: width 0.3s; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.85em;">
+                          ${progress}%
+                        </div>
+                      </div>
+                    `;
+                  }
+                });
+              }
+            });
+
+            // 下载完成
+            apiStatus.className = "status-banner success";
+            apiStatus.innerHTML = `
+              <span>✅</span>
+              <span>翻译模型下载完成！可以开始使用翻译功能。</span>
+            `;
+            translateBtn.disabled = false;
+            
+            // 销毁临时创建的 translator
+            translator.destroy();
           }
         } catch (error) {
           apiStatus.className = "status-banner error";

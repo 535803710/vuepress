@@ -7,7 +7,7 @@
 
 ---
 
-<p align="center"></p>
+<p>第一次使用可能需要下载模型
   <a href="/demo/translator-demo.html" target="_blank" style="display: inline-block; padding: 10px 20px; background: #3eaf7c; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">
     🚀点击查看在线演示 →
   </a>
