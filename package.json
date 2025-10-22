@@ -4,12 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "vuepress": "^1.9.7"
   },
 
   "scripts": {
     "dev":"vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vuepress build docs"
   }
 
 }

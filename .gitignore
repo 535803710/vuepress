@@ -5,7 +5,7 @@ pnpm-lock.yaml
 # npm-debug.log
 # coverage/
 # run
-# dist
+dist
 # public
 # .DS_Store
 # .nyc_output
