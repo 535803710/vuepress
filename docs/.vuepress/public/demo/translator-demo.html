@@ -906,6 +906,8 @@
             sourceLanguage: 'zh',
             targetLanguage: 'en',
           });
+
+          console.log('🔍 API 可用性状态:', translatorCapabilities);
           
           if (translatorCapabilities === "unavailable") {
             apiStatus.className = "status-banner error";
@@ -915,62 +917,36 @@
             `;
             translateBtn.disabled = true;
           } else if (translatorCapabilities === "available") {
-            // 模型已就绪
+            // 模型已就绪，无需下载
             apiStatus.className = "status-banner success";
             apiStatus.innerHTML = `
               <span>✅</span>
               <span>Translator API 可用！可以开始使用翻译功能。</span>
             `;
             translateBtn.disabled = false;
-          } else if (translatorCapabilities === "downloadable" || translatorCapabilities === "downloading") {
-            // 需要下载模型，主动触发下载
+          } else if (translatorCapabilities === "downloadable") {
+            // 需要下载模型，显示提示信息
             apiStatus.className = "status-banner warning";
             apiStatus.innerHTML = `
               <span>📦</span>
-              <span>正在下载翻译模型，请稍候...</span>
-              <div id="download-progress" style="margin-top: 8px; font-size: 0.9em;">准备下载...</div>
-            `;
-            translateBtn.disabled = true;
-
-            // 使用 create() 主动下载模型并监听进度
-            const translator = await self.Translator.create({
-              sourceLanguage: 'zh',
-              targetLanguage: 'en',
-              monitor(m) {
-                m.addEventListener('downloadprogress', (e) => {
-                  const progress = Math.round(e.loaded * 100);
-                  console.log(`📥 下载进度: ${progress}%`);
-                  
-                  const progressEl = document.getElementById('download-progress');
-                  if (progressEl) {
-                    progressEl.innerHTML = `
-                      <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; margin-top: 4px;">
-                        <div style="width: ${progress}%; background: linear-gradient(90deg, #4CAF50, #45a049); height: 20px; transition: width 0.3s; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.85em;">
-                          ${progress}%
-                        </div>
-                      </div>
-                    `;
-                  }
-                });
-              }
-            });
-
-            // 下载完成
-            apiStatus.className = "status-banner success";
-            apiStatus.innerHTML = `
-              <span>✅</span>
-              <span>翻译模型下载完成！可以开始使用翻译功能。</span>
+              <span>首次使用需要下载翻译模型，点击"翻译"按钮时将自动下载。</span>
             `;
             translateBtn.disabled = false;
-            
-            // 销毁临时创建的 translator
-            translator.destroy();
+          } else if (translatorCapabilities === "downloading") {
+            // 模型正在下载中
+            apiStatus.className = "status-banner warning";
+            apiStatus.innerHTML = `
+              <span>⏳</span>
+              <span>翻译模型正在下载中，请稍候...</span>
+            `;
+            translateBtn.disabled = false;
           }
         } catch (error) {
+          console.error('❌ API 检查失败:', error);
           apiStatus.className = "status-banner error";
           apiStatus.innerHTML = `
             <span>❌</span>
-            <span>Translator API 不可用: ${error.message}</span>
+            <span>检查 API 可用性时出错: ${error.message}</span>
           `;
           translateBtn.disabled = true;
         }
@@ -993,26 +969,56 @@
           return;
         }
 
+        let translator = null;
         try {
           translateBtn.disabled = true;
+          translateBtn.textContent = '翻译中...';
           outputText.value = "";
           
-          // 创建翻译器并执行翻译
-          const translator = await self.Translator.create({
+          // 创建翻译器并监听下载进度
+          translator = await self.Translator.create({
             sourceLanguage: source,
-            targetLanguage: target
+            targetLanguage: target,
+            monitor(m) {
+              m.addEventListener('downloadprogress', (e) => {
+                const progress = Math.round(e.loaded * 100);
+                console.log(`e`,e);
+                console.log(`📥 下载翻译模型: ${progress}%`);
+                
+                // 更新按钮文本显示下载进度
+                if (progress < 100) {
+                  translateBtn.textContent = `下载模型中 ${progress}%`;
+                } else {
+                  translateBtn.textContent = '正在翻译...';
+                }
+              });
+            }
           });
           
+          // 执行翻译
           const result = await translator.translate(text);
+          console.log('🔍 翻译结果:', result);
           
           outputText.value = result;
           outputCharCount.textContent = result.length;
+          
+          console.log('✅ 翻译成功');
         } catch (error) {
-          console.error("Translation error:", error);
-          alert(`翻译失败: ${error.message}`);
+          console.error("❌ 翻译错误:", error);
+          
+          // 根据错误类型提供更详细的提示
+          if (error.name === "NetworkError") {
+            alert(`网络错误: 下载翻译模型失败，请检查网络连接后重试。`);
+          } else if (error.name === "QuotaExceededError") {
+            alert(`输入文本过长: 您的文本长度为 ${error.requested}，但最大支持 ${error.quota}。`);
+          } else {
+            alert(`翻译失败: ${error.message}`);
+          }
+          
           outputText.value = "";
         } finally {
           translateBtn.disabled = false;
+          translateBtn.textContent = '翻译';
         }
       }
 
