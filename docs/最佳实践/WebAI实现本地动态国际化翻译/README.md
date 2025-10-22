@@ -7,7 +7,11 @@
 
 ---
 
-[点击查看示例](./translator-demo.html)
+<p align="center"></p>
+  <a href="/demo/translator-demo.html" target="_blank" style="display: inline-block; padding: 10px 20px; background: #3eaf7c; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">
+    🚀点击查看在线演示 →
+  </a>
+</p>
 
 ![](https://pub-a953275fa2c34c18b80fc1f84e3ea746.r2.dev/xiaowo/2025/10/19d54d5b30f4308a01980e1e0c57d344.gif)
 
