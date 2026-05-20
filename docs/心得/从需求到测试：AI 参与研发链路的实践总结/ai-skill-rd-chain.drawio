@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" modified="2026-05-19T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="ai-skill-rd-chain" name="Skill AI研发链路">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="把 Skill 融入 AI 研发链路的最佳实践" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=26;fontStyle=1;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="360" y="30" width="880" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="从需求梳理、开发实现、测试验证到文档沉淀，形成可检查、可复用的 AI 研发流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#6b7280;" vertex="1" parent="1">
+          <mxGeometry x="340" y="78" width="920" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s1" value="1. 收集需求和项目上下文&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;原始需求 / 历史文档 / 相似功能 / 接口 / 权限规则&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#eef2ff;strokeColor=#4f46e5;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="160" width="300" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="s2" value="2. requirement skill 梳理需求&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;目标 / 角色 / 流程 / 字段状态 / 权限 / 未确认问题&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#f0fdf4;strokeColor=#16a34a;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="160" width="300" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3" value="3. grillwithdoc skill 拷问需求&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;边界 / 风险 / 异常场景 / 业务模型冲突 / 待确认项&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fff7ed;strokeColor=#f97316;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="870" y="160" width="300" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="s4" value="4. 输出轻量技术实现说明&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;模块 / 接口 / 数据流 / 权限 / 状态 / 测试重点&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#f8fafc;strokeColor=#64748b;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="160" width="300" height="88" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s5" value="5. TDD skill 实现核心逻辑&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;先写测试 / 再实现 / 跑通后重构&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fef2f2;strokeColor=#dc2626;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="360" width="300" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="s6" value="6. testing skill 补齐测试&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;单元测试 / 组件测试 / 页面行为 / 边界场景&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#ecfeff;strokeColor=#0891b2;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="870" y="360" width="300" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="s7" value="7. code review skill 做代码审查&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;项目规范 / 类型 / 权限 / 异常分支 / 重复逻辑&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#faf5ff;strokeColor=#9333ea;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="360" width="300" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="s8" value="8. 本地运行，人工走查核心流程&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页面 / 搜索分页 / 表单 / 弹窗 / 权限按钮 / 错误提示&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fdf2f8;strokeColor=#db2777;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="360" width="300" height="88" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s9" value="9. testcase skill 输出测试用例 Excel&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;基于需求 / 技术方案 / 最终代码 / 测试覆盖点&lt;br&gt;导入 Transcend 项目管理平台&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fffbeb;strokeColor=#d97706;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="360" y="570" width="360" height="98" as="geometry"/>
+        </mxCell>
+        <mxCell id="s10" value="10. 文档 skill 更新文档&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;功能说明 / 权限规则 / 接口变化 / 操作流程 / 已知限制&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#eff6ff;strokeColor=#2563eb;fontColor=#1f2937;fontSize=15;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="570" width="360" height="98" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="note" value="关键原则：每个 Skill 都要有明确输入和输出；不确定内容标记 TODO；AI 负责生成和检查，人负责判断和验收。" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=14;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="360" y="760" width="880" height="64" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s2" target="s3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s3" target="s4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s4" target="s5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s5" target="s6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s6" target="s7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s7" target="s8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s8" target="s9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6b7280;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s9" target="s10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9ca3af;strokeWidth=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="s10" target="s1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="900"/>
+              <mxPoint x="40" y="900"/>
+              <mxPoint x="40" y="204"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
