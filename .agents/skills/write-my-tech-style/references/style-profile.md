@@ -142,6 +142,15 @@ Run this pass after drafting or rewriting:
 5. Rebuild titles that sound like neutral documentation.
 6. Check whether every polished sentence still sounds like a human choice.
 7. Check the mode. Publication drafts should not collapse into a dry encyclopedia outline.
+8. Check the banned phrasing list below before returning the article.
+
+## Banned phrasing
+
+- Ban the contrast template `不是 ... 而是 ...`. Rewrite it as a direct judgment, concrete reason, or explicit tradeoff.
+- Ban `接住 ...` as a transition or value statement.
+- Avoid an over-objective explanatory tone. Keep the article's judgment visible through the actual problem, choice, constraint, and result.
+- Remove obvious AI-shaped wording: template openings, generic uplift, balanced-but-empty hedging, and polished filler that carries no technical pressure.
+- Ban negative-advice templates that begin with `不要 ...`, `不把 ...`, or `不靠 ...`. Rewrite them as a positive action, a concrete limit, or a direct conclusion.
 
 ## Guardrails
 

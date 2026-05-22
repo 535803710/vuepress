@@ -68,4 +68,5 @@ Before returning an article or rewrite, check:
 - Does the article explain through examples, steps, or code where the topic needs them?
 - Do section sizes and sentence rhythm vary?
 - Did the rewrite remove generic AI filler without inventing technical claims?
+- Did the de-AI pass remove the banned phrasing patterns in the style profile?
 - Does the ending land on a practical point instead of a padded recap?
