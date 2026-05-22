@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write My Tech Style"
+  short_description: "Draft and rewrite technical articles in my style"
+  default_prompt: "Use $write-my-tech-style to rewrite this technical article draft in my voice and reduce AI traces."
