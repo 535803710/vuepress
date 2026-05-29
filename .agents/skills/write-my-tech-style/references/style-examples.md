@@ -59,6 +59,26 @@ Use these as shape examples, not copy targets.
 这件事不是不能用 AI 做，而是不能把需求、边界和测试都空着就让它开写。
 ```
 
+### Unclosed aside opening
+
+```markdown
+最近后端升级了网管，导致所有的开发环境的接口地址也使用了 https。
+
+导致我们本地开发的时候所有的接口都在报跨域（服了。。。说改就改
+```
+
+### Dialogue analogy opening
+
+```markdown
+常规轮训简单的实现了每隔几秒向服务器发起请求来查看状态是否改变，比如说：客户端使用 `setInterval` 每隔10m向服务端发起请求，
+
+>客户端："服务端，我能吃饭了么？" ，服务端："还没做好呢。"
+>
+>10m后
+>
+>客户端："服务端，我能吃饭了么？" ，服务端："还没做好呢。"
+```
+
 ## Explanation blocks
 
 ### Plain definition to steps
@@ -100,6 +120,26 @@ Use these as shape examples, not copy targets.
 
 Use this when the article begins from a real scene and the implementation itself is the story.
 
+### Official quote to plain language
+
+```markdown
+`IntersectionObserver` 接口提供了一种异步观察目标元素与其祖先元素或顶级文档视窗交叉状态的方法。
+
+**简单来说，就是我们能不能看到想要观察的对象。**
+```
+
+## 选型展示
+
+Use when the article needs to show rejected options before the chosen path:
+
+```markdown
+考虑到上面几点，我想了几个方法 🤔：
+
+- [ ] ~~微前端：考虑过 qiankun 和 micro-app，但是由于 ui 组件使用的是 vue2 开发所以无法兼容~~
+- [ ] ~~ui 组件库+中台组件库 升级到 vue3 版本：工程量太大被拒绝~~
+- [x] 降级项目到 vue2.7：改动较小，逻辑基本无需改动。成本可控
+```
+
 ## Transitions
 
 Prefer direct turns:
@@ -138,6 +178,26 @@ Avoid defaulting to:
 但最后真正把问题解决掉的，可能还是一个更简单的现实办法。
 ```
 
+## 签名收尾
+
+### Real-world twist ending
+
+```markdown
+效果很好👍，用旧手机开启摄像头后，检测到狗就播放声音了。
+
+但是，家里夫人直接做了一个围栏晚上给狗圈起来了🚫
+```
+
+### Complaint landing
+
+```markdown
+- 因为是 webpack 启动开发环境，所以命令也是使用的 webpack 的 CLI 命令
+- 需要本地生成一个 ssl 证书以供本地服务器使用
+- 修改 package 命令来快捷操作
+
+最后吐槽一下 为啥我们项目的 storybook 开启的这么慢！
+```
+
 ## Rewrite checks
 
 Given an AI-shaped draft, prefer this direction:
@@ -147,3 +207,6 @@ Given an AI-shaped draft, prefer this direction:
 
 - Neutral: `函数式编程具有许多优点，例如可维护性和可测试性。`
 - Rewrite: `函数式编程先别讲太大，先守住两件事：数据别乱改，函数别到处留副作用。`
+
+- AI summary: `该方案通过以下步骤实现了一个基于网页的实时物体检测系统，专门用于识别画面中的狗并播放特定音频以驱赶它离开沙发。具体实现过程包括以下几个核心部分：`
+- Rewrite: `功能跑起来了，检测到狗就会播音频。最后真正把狗拦在沙发外的，可能还是一个更简单的现实办法。`

@@ -47,7 +47,7 @@ When rewriting an existing draft:
    - stacked labels such as "firstly", "secondly", "finally" when the article can move more naturally
 3. Rebuild the title and opening when they are the main source of template tone.
 4. Add personal pressure only where the source supports it: a real objection, a quick analogy, a direct question, a strong takeaway, or a "why this matters" sentence.
-5. Keep the rewrite readable. Do not add slang, emojis, jokes, or forceful titles mechanically.
+5. Keep the rewrite readable. Preserve the author's emoji, `。。。`, unclosed aside parentheses, and light wordplay when they fit the source or article mode. Do not pile them on mechanically, and do not use them as a substitute for technical explanation or a forced title hook.
 
 ## Title Work
 
@@ -70,3 +70,6 @@ Before returning an article or rewrite, check:
 - Did the rewrite remove generic AI filler without inventing technical claims?
 - Did the de-AI pass remove the banned phrasing patterns in the style profile?
 - Does the ending land on a practical point instead of a padded recap?
+- Does at least one natural signature move appear in the opening or ending when article mode fits the task?
+- Is the summary section free of template recap such as `该方案通过以下步骤实现了一个...系统`?
+- Were emoji, `。。。`, and aside punctuation kept only when they sound authored, not decorative?
